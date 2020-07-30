@@ -21,7 +21,7 @@
         android:backgroundTint="#ffa500"
         android:text="+"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/conv_btn" />
+        app:layout_constraintTop_toBottomOf="@id/txt" />
 
     <Button
         android:id="@+id/sub_btn"
@@ -60,12 +60,14 @@
         android:id="@+id/res_btn"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/design_default_color_error"
         android:text="="
         android:textColor="@color/design_default_color_background"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/div_btn" />
 
     <Button
@@ -86,7 +88,7 @@
         android:layout_marginTop="80dp"
         android:text="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/conv_btn" />
+        app:layout_constraintTop_toBottomOf="@id/txt" />
 
     <Button
         android:id="@+id/btn_2"
@@ -95,7 +97,7 @@
         android:layout_marginTop="80dp"
         android:text="2"
         app:layout_constraintLeft_toRightOf="@+id/btn_1"
-        app:layout_constraintTop_toBottomOf="@id/conv_btn" />
+        app:layout_constraintTop_toBottomOf="@id/txt" />
 
     <Button
         android:id="@+id/btn_3"
@@ -104,7 +106,7 @@
         android:layout_marginTop="80dp"
         android:text="3"
         app:layout_constraintLeft_toRightOf="@id/btn_2"
-        app:layout_constraintTop_toBottomOf="@id/conv_btn" />
+        app:layout_constraintTop_toBottomOf="@id/txt" />
 
     <Button
         android:id="@+id/btn_4"
@@ -174,17 +176,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_7" />
 
-    <Button
-        android:id="@+id/conv_btn"
-        android:layout_width="330dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="40dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="Currency Converter"
-        android:textColor="@color/design_default_color_background"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt" />
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

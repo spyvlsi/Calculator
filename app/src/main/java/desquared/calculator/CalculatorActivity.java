@@ -1,12 +1,18 @@
 package desquared.calculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemReselectedListener;
 
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -131,8 +137,9 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText == null) {
+                if (editText.equals("")) {
                     editText.setText("");
+
                 } else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
@@ -223,7 +230,23 @@ public class CalculatorActivity extends AppCompatActivity {
             }
         });
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.page_calculator);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case (R.id.page_calculator):
+                        return true;
+                    case (R.id.page_converter):
+                        startActivity(new Intent(getApplicationContext(), ConverterActivity.class));
+                        return true;
+                }
+                return false;
+            }
+        });
+
 
     }
-
 }
+

@@ -1,11 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/page_1"
+        android:id="@+id/page_calculator"
         android:enabled="true"
         android:icon="@drawable/calculator"
         android:title="Calculator"/>
     <item
-        android:id="@+id/page_2"
+        android:id="@+id/page_converter"
         android:enabled="true"
         android:icon="@drawable/euro"
         android:title="Converter"/>
