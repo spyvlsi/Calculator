@@ -24,6 +24,23 @@ public class ConverterActivity extends AppCompatActivity {
         Spinner spinnerTo = findViewById(R.id.to_spinner);
         Button convertBtn = findViewById(R.id.convBtn);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.page_converter);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
