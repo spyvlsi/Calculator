@@ -139,8 +139,7 @@ public class CalculatorActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (editText.getText().toString().isEmpty()) {
                     createAlertDialog("ERROR", "Please input a number");
-                }
-                else {
+                } else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
                     flag = 1;
@@ -243,6 +242,7 @@ public class CalculatorActivity extends AppCompatActivity {
 
 
     }
+
     private void createAlertDialog(String title, String message) {
         AlertDialog.Builder dlgAlert = new AlertDialog.Builder(CalculatorActivity.this);
         dlgAlert.setMessage(message);

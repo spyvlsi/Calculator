@@ -56,14 +56,12 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
             public void onClick(View v) {
 
                 if (txt_amount.getText().toString().isEmpty()) {
-                    createAlertDialog("Amount can't be empty","Please enter Amount");
+                    createAlertDialog("Amount can't be empty", "Please enter Amount");
                 } else if (spinnerFrom.getSelectedItemPosition() == 0) {
                     createAlertDialog("Base currency can't be empty", "Choose a currency from which you wan to convert");
-                }
-                else if(spinnerTo.getSelectedItemPosition() == 0) {
+                } else if (spinnerTo.getSelectedItemPosition() == 0) {
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
-                }
-                else {
+                } else {
                     amount = Float.parseFloat(txt_amount.getText() + "");
                 }
 
