@@ -30,11 +30,11 @@
 <!--        app:layout_constraintRight_toRightOf="parent" />-->
 
     <EditText
-        android:id="@+id/ammount_field"
+        android:id="@+id/amount_field"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:hint="Please insert the ammount"
+        android:hint="Please insert the amount"
         android:textAlignment="center"
         android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -50,7 +50,7 @@
         android:layout_marginTop="70dp"
         android:text="FROM:"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ammount_field" />
+        app:layout_constraintTop_toBottomOf="@id/amount_field" />
 
     <TextView
         android:id="@+id/to"
@@ -62,14 +62,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/from" />
 
-    <Spinner
-        android:id="@+id/from_spinner"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/eur"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/from"
+        android:text="EUR"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="68dp"
-        app:layout_constraintLeft_toRightOf="@id/from"
-        app:layout_constraintTop_toBottomOf="@id/ammount_field" />
+        app:layout_constraintTop_toBottomOf="@id/amount_field"/>
+
+<!--    <Spinner-->
+<!--        android:id="@+id/from_spinner"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginTop="68dp"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/from"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/ammount_field" />-->
 
     <Spinner
         android:id="@+id/to_spinner"
@@ -77,8 +87,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="46dp"
-        app:layout_constraintLeft_toRightOf="@id/to"
-        app:layout_constraintTop_toBottomOf="@id/from_spinner" />
+        app:layout_constraintTop_toBottomOf="@id/eur"
+        app:layout_constraintLeft_toRightOf="@id/to" />
 
     <Button
         android:id="@+id/convBtn"
