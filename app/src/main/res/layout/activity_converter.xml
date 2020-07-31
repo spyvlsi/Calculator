@@ -64,18 +64,18 @@
 
     <Spinner
         android:id="@+id/from_spinner"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="68dp"
         app:layout_constraintLeft_toRightOf="@id/from"
         app:layout_constraintTop_toBottomOf="@id/ammount_field" />
 
     <Spinner
         android:id="@+id/to_spinner"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="46dp"
         app:layout_constraintLeft_toRightOf="@id/to"
         app:layout_constraintTop_toBottomOf="@id/from_spinner" />

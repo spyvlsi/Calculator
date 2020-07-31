@@ -1,6 +1,8 @@
 package desquared.calculator;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -24,15 +26,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConverterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    EditText txt_amount;
+    Button converBtn;
+    Spinner spinnerFrom;
+    Spinner spinnerTo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
 
-        EditText ammount = findViewById(R.id.ammount_field);
-        Spinner spinnerFrom = findViewById(R.id.from_spinner);
-        Spinner spinnerTo = findViewById(R.id.to_spinner);
-        Button convertBtn = findViewById(R.id.convBtn);
+        txt_amount = findViewById(R.id.ammount_field);
+        spinnerFrom = findViewById(R.id.from_spinner);
+        spinnerTo = findViewById(R.id.to_spinner);
+        converBtn = findViewById(R.id.convBtn);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.currencies, android.R.layout.simple_spinner_item);
@@ -40,17 +47,35 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
         spinnerFrom.setAdapter(adapter);
         spinnerFrom.setOnItemSelectedListener(this);
 
-//        Retrofit retrofit = new Retrofit.Builder()
-//                .baseUrl("http://data.fixer.io/api/")
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build();
-//        PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
-//        Call<List<ConvertApiResponse>> call = placeHolderApi.getCurrencies();
 
+        converBtn.setOnClickListener(new View.OnClickListener() {
+            float amount;
 
+            @Nullable
+            @Override
+            public void onClick(View v) {
 
+                if (txt_amount.getText().toString().isEmpty()) {
+                    createAlertDialog("Amount can't be empty","Please enter Amount");
+                } else if (spinnerFrom.getSelectedItemPosition() == 0) {
+                    createAlertDialog("Base currency can't be empty", "Choose a currency from which you wan to convert");
+                }
+                else if(spinnerTo.getSelectedItemPosition() == 0) {
+                    createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
+                }
+                else {
+                    amount = Float.parseFloat(txt_amount.getText() + "");
+                }
 
+//                Retrofit retrofit = new Retrofit.Builder()
+//                        .baseUrl("http://data.fixer.io/api/")
+//                        .addConverterFactory(GsonConverterFactory.create())
+//                        .build();
+//                PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
+//                Call<List<ConvertApiResponse>> call = placeHolderApi.getCurrencies();
+            }
 
+        });
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -83,15 +108,24 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 
     }
 
+    private void createAlertDialog(String title, String message) {
+        AlertDialog.Builder dlgAlert = new AlertDialog.Builder(ConverterActivity.this);
+        dlgAlert.setMessage(message);
+        dlgAlert.setTitle(title);
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.show();
+    }
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
-
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }

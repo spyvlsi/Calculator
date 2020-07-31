@@ -137,10 +137,10 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText.equals("")) {
-                    editText.setText("");
-
-                } else {
+                if (editText.getText().toString().isEmpty()) {
+                    createAlertDialog("ERROR", "Please input a number");
+                }
+                else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
                     flag = 1;
@@ -151,8 +151,8 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText == null) {
-                    editText.setText("");
+                if (editText.getText().toString().isEmpty()) {
+                    createAlertDialog("ERROR", "Please input a number");
                 } else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
@@ -164,8 +164,8 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText == null) {
-                    editText.setText("");
+                if (editText.getText().toString().isEmpty()) {
+                    createAlertDialog("ERROR", "Please input a number");
                 } else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
@@ -178,8 +178,8 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText == null) {
-                    editText.setText("");
+                if (editText.getText().toString().isEmpty()) {
+                    createAlertDialog("ERROR", "Please input a number");
                 } else {
                     num1 = Double.parseDouble(editText.getText() + "");
                     editText.setText(null);
@@ -192,8 +192,8 @@ public class CalculatorActivity extends AppCompatActivity {
         btn_res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editText == null) {
-                    editText.setText("");
+                if (editText.getText().toString().isEmpty()) {
+                    createAlertDialog("ERROR", "Empty text");
                 } else {
                     num2 = Double.parseDouble(editText.getText() + "");
 
@@ -217,12 +217,7 @@ public class CalculatorActivity extends AppCompatActivity {
                             break;
 
                         default:
-                            AlertDialog.Builder dlgAlert = new AlertDialog.Builder(CalculatorActivity.this);
-                            dlgAlert.setMessage("ERROR");
-                            dlgAlert.setTitle("Error Message...");
-                            dlgAlert.setPositiveButton("OK", null);
-                            dlgAlert.setCancelable(true);
-                            dlgAlert.show();
+                            createAlertDialog("ERROR", "ERROR");
                     }
                 }
 
@@ -247,6 +242,14 @@ public class CalculatorActivity extends AppCompatActivity {
         });
 
 
+    }
+    private void createAlertDialog(String title, String message) {
+        AlertDialog.Builder dlgAlert = new AlertDialog.Builder(CalculatorActivity.this);
+        dlgAlert.setMessage(message);
+        dlgAlert.setTitle(title);
+        dlgAlert.setPositiveButton("OK", null);
+        dlgAlert.setCancelable(true);
+        dlgAlert.show();
     }
 }
 

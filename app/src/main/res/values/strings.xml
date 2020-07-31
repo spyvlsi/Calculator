@@ -2,6 +2,7 @@
     <string name="app_name">Calculator</string>
     <string name="api_key">d628c113e9c378a58d31982c03e19a6b</string>
     <string-array name="currencies">
+        <item>-</item>
         <item>AED</item>
         <item>AFN</item>
         <item>ALL</item>
