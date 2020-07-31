@@ -40,12 +40,12 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
         spinnerFrom.setAdapter(adapter);
         spinnerFrom.setOnItemSelectedListener(this);
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://data.fixer.io/api/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-        PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
-        Call<List<ConvertApiResponse>> call = placeHolderApi.getCurrencies();
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl("http://data.fixer.io/api/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//        PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
+//        Call<List<ConvertApiResponse>> call = placeHolderApi.getCurrencies();
 
 
 
