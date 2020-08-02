@@ -21,6 +21,14 @@ public class ApiResponse {
     @Expose
     public RatesResponseApi rates;
 
+    public ApiResponse(Boolean success, Integer timestamp, String base, String date, RatesResponseApi rates) {
+        this.success = success;
+        this.timestamp = timestamp;
+        this.base = base;
+        this.date = date;
+        this.rates = rates;
+    }
+
     public Boolean getSuccess() {
         return success;
     }
@@ -59,5 +67,16 @@ public class ApiResponse {
 
     public void setRates(RatesResponseApi rates) {
         this.rates = rates;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResponse{" +
+                "success=" + success +
+                ", timestamp=" + timestamp +
+                ", base='" + base + '\'' +
+                ", date='" + date + '\'' +
+                ", rates=" + rates +
+                '}';
     }
 }

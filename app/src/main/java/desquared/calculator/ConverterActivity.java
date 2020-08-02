@@ -14,19 +14,27 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ConverterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText txt_amount;
-    Button converBtn;
+    Button convertBtn;
     Spinner spinnerTo;
-    float amount;
+    float amount, result;
     String toSpnValue;
-    EditText editTextResult;
+    TextView textResult;
     private PlaceHolderApi placeHolderApi;
-    final String api_key = "d628c113e9c378a58d31982c03e19a6b";
+    private static final String BASE_URL = "http://data.fixer.io/api/";
+    private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
 
 
     @Override
@@ -36,11 +44,11 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 
         txt_amount = findViewById(R.id.amount_field);
         spinnerTo = findViewById(R.id.to_spinner);
-        converBtn = findViewById(R.id.convBtn);
-        editTextResult = findViewById(R.id.restxt2);
+        convertBtn = findViewById(R.id.convBtn);
+        textResult = findViewById(R.id.restxt2);
 
 
-        converBtn.setOnClickListener(new View.OnClickListener() {
+        convertBtn.setOnClickListener(new View.OnClickListener() {
 
             @Nullable
             @Override
@@ -52,17 +60,34 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
                     amount = Float.parseFloat(txt_amount.getText() + "");
-//                    editTextResult.setText(amount + "");
-//                    createConversion();
-//                    getResult();
+//                    result = to_rate.getRate()*(1/baserate.getRate())*amount;
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl(BASE_URL)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
+                    Call<ApiResponse> call = placeHolderApi.getLatest(API_KEY);
+
+                    call.enqueue(new Callback<ApiResponse>() {
+                        @Override
+                        public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                            if (!response.isSuccessful()) {
+                                textResult.setText("Code: " + response.code());
+                                return;
+                            } else if (response.isSuccessful()) {
+                                ApiResponse apiResponse = response.body();
+                                textResult.setText(apiResponse.toString());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<ApiResponse> call, Throwable t) {
+                            textResult.setText(t.getMessage());
+
+                        }
+                    });
                 }
 
-//                Retrofit retrofit = new Retrofit.Builder()
-//                        .baseUrl("http://data.fixer.io/api/")
-//                        .addConverterFactory(GsonConverterFactory.create())
-//                        .build();
-//                PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
-//                Call<List<ConvertApiResponse>> call = placeHolderApi.get.Result();
             }
 
         });

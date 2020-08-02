@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class RatesResponseApi {
+
     public Float getaED() {
         return aED;
     }
@@ -1852,4 +1853,178 @@ public class RatesResponseApi {
     @SerializedName("ZWL")
     @Expose
     public Float zWL;
+
+    @Override
+    public String toString() {
+        return "RatesResponseApi{" +
+                "aED=" + aED +
+                ", aFN=" + aFN +
+                ", aLL=" + aLL +
+                ", aMD=" + aMD +
+                ", aNG=" + aNG +
+                ", aOA=" + aOA +
+                ", aRS=" + aRS +
+                ", aUD=" + aUD +
+                ", aWG=" + aWG +
+                ", aZN=" + aZN +
+                ", bAM=" + bAM +
+                ", bBD=" + bBD +
+                ", bDT=" + bDT +
+                ", bGN=" + bGN +
+                ", bHD=" + bHD +
+                ", bIF=" + bIF +
+                ", bMD=" + bMD +
+                ", bND=" + bND +
+                ", bOB=" + bOB +
+                ", bRL=" + bRL +
+                ", bSD=" + bSD +
+                ", bTC=" + bTC +
+                ", bTN=" + bTN +
+                ", bWP=" + bWP +
+                ", bYN=" + bYN +
+                ", bYR=" + bYR +
+                ", bZD=" + bZD +
+                ", cAD=" + cAD +
+                ", cDF=" + cDF +
+                ", cHF=" + cHF +
+                ", cLF=" + cLF +
+                ", cLP=" + cLP +
+                ", cNY=" + cNY +
+                ", cOP=" + cOP +
+                ", cRC=" + cRC +
+                ", cUC=" + cUC +
+                ", cUP=" + cUP +
+                ", cVE=" + cVE +
+                ", cZK=" + cZK +
+                ", dJF=" + dJF +
+                ", dKK=" + dKK +
+                ", dOP=" + dOP +
+                ", dZD=" + dZD +
+                ", eGP=" + eGP +
+                ", eRN=" + eRN +
+                ", eTB=" + eTB +
+                ", eUR=" + eUR +
+                ", fJD=" + fJD +
+                ", fKP=" + fKP +
+                ", gBP=" + gBP +
+                ", gEL=" + gEL +
+                ", gGP=" + gGP +
+                ", gHS=" + gHS +
+                ", gIP=" + gIP +
+                ", gMD=" + gMD +
+                ", gNF=" + gNF +
+                ", gTQ=" + gTQ +
+                ", gYD=" + gYD +
+                ", hKD=" + hKD +
+                ", hNL=" + hNL +
+                ", hRK=" + hRK +
+                ", hTG=" + hTG +
+                ", hUF=" + hUF +
+                ", iDR=" + iDR +
+                ", iLS=" + iLS +
+                ", iMP=" + iMP +
+                ", iNR=" + iNR +
+                ", iQD=" + iQD +
+                ", iRR=" + iRR +
+                ", iSK=" + iSK +
+                ", jEP=" + jEP +
+                ", jMD=" + jMD +
+                ", jOD=" + jOD +
+                ", jPY=" + jPY +
+                ", kES=" + kES +
+                ", kGS=" + kGS +
+                ", kHR=" + kHR +
+                ", kMF=" + kMF +
+                ", kPW=" + kPW +
+                ", kRW=" + kRW +
+                ", kWD=" + kWD +
+                ", kYD=" + kYD +
+                ", kZT=" + kZT +
+                ", lAK=" + lAK +
+                ", lBP=" + lBP +
+                ", lKR=" + lKR +
+                ", lRD=" + lRD +
+                ", lSL=" + lSL +
+                ", lTL=" + lTL +
+                ", lVL=" + lVL +
+                ", lYD=" + lYD +
+                ", mAD=" + mAD +
+                ", mDL=" + mDL +
+                ", mGA=" + mGA +
+                ", mKD=" + mKD +
+                ", mMK=" + mMK +
+                ", mNT=" + mNT +
+                ", mOP=" + mOP +
+                ", mRO=" + mRO +
+                ", mUR=" + mUR +
+                ", mVR=" + mVR +
+                ", mWK=" + mWK +
+                ", mXN=" + mXN +
+                ", mYR=" + mYR +
+                ", mZN=" + mZN +
+                ", nAD=" + nAD +
+                ", nGN=" + nGN +
+                ", nIO=" + nIO +
+                ", nOK=" + nOK +
+                ", nPR=" + nPR +
+                ", nZD=" + nZD +
+                ", oMR=" + oMR +
+                ", pAB=" + pAB +
+                ", pEN=" + pEN +
+                ", pGK=" + pGK +
+                ", pHP=" + pHP +
+                ", pKR=" + pKR +
+                ", pLN=" + pLN +
+                ", pYG=" + pYG +
+                ", qAR=" + qAR +
+                ", rON=" + rON +
+                ", rSD=" + rSD +
+                ", rUB=" + rUB +
+                ", rWF=" + rWF +
+                ", sAR=" + sAR +
+                ", sBD=" + sBD +
+                ", sCR=" + sCR +
+                ", sDG=" + sDG +
+                ", sEK=" + sEK +
+                ", sGD=" + sGD +
+                ", sHP=" + sHP +
+                ", sLL=" + sLL +
+                ", sOS=" + sOS +
+                ", sRD=" + sRD +
+                ", sTD=" + sTD +
+                ", sVC=" + sVC +
+                ", sYP=" + sYP +
+                ", sZL=" + sZL +
+                ", tHB=" + tHB +
+                ", tJS=" + tJS +
+                ", tMT=" + tMT +
+                ", tND=" + tND +
+                ", tOP=" + tOP +
+                ", tRY=" + tRY +
+                ", tTD=" + tTD +
+                ", tWD=" + tWD +
+                ", tZS=" + tZS +
+                ", uAH=" + uAH +
+                ", uGX=" + uGX +
+                ", uSD=" + uSD +
+                ", uYU=" + uYU +
+                ", uZS=" + uZS +
+                ", vEF=" + vEF +
+                ", vND=" + vND +
+                ", vUV=" + vUV +
+                ", wST=" + wST +
+                ", xAF=" + xAF +
+                ", xAG=" + xAG +
+                ", xAU=" + xAU +
+                ", xCD=" + xCD +
+                ", xDR=" + xDR +
+                ", xOF=" + xOF +
+                ", xPF=" + xPF +
+                ", yER=" + yER +
+                ", zAR=" + zAR +
+                ", zMK=" + zMK +
+                ", zMW=" + zMW +
+                ", zWL=" + zWL +
+                '}';
+    }
 }
