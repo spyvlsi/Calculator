@@ -20,6 +20,11 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.lang.reflect.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,6 +39,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     float amount, result;
     String toSpnValue;
     TextView textResult;
+    double final_toRate;
     private static final String BASE_URL = "http://data.fixer.io/api/";
     private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
 
@@ -62,7 +68,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                 } else {
 
                     amount = Float.parseFloat(txt_amount.getText() + "");
-//                    result = to_rate.getRate()*(1/baserate.getRate())*amount;
 
                     Gson gson = new GsonBuilder()
                             .setLenient()
@@ -83,7 +88,33 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                                 return;
                             } else if (response.isSuccessful()) {
                                 ApiResponse apiResponse = response.body();
-                                textResult.setText(apiResponse.toString());
+
+                                Field fields[] = RatesResponseApi.class.getDeclaredFields();
+                                List<String> currencies = new ArrayList<String>();
+                                List<Double> rates = new ArrayList<Double>();
+
+                                int index = 0;
+                                double d_help;
+                                String str_help;
+                                Object value;
+                                for (Field field : fields) {
+                                    currencies.add(index, field.getName().toUpperCase());
+                                    try {
+                                        value = field.get(apiResponse.rates);
+                                        str_help = value.toString();
+                                        d_help = Double.valueOf(str_help).doubleValue();
+                                        rates.add(index, d_help);
+                                    } catch (IllegalAccessException e) {
+                                        e.printStackTrace();
+                                    }
+                                    index++;
+                                }
+                                HashMap<String, Double> map= new HashMap<>();
+                                for(int i = 0; i<currencies.size(); i++){
+                                    map.put(currencies.get(i),rates.get(i));
+                                }
+
+                                final_toRate = map.get(toSpnValue);
                             }
                         }
 
@@ -138,7 +169,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
+        String textTo = parent.getItemAtPosition(position).toString();
     }
 
     @Override

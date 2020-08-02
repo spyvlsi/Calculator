@@ -5,6 +5,511 @@ import com.google.gson.annotations.SerializedName;
 
 public class RatesResponseApi {
 
+    @SerializedName("AED")
+    @Expose
+    public Float aED;
+    @SerializedName("AFN")
+    @Expose
+    public Float aFN;
+    @SerializedName("ALL")
+    @Expose
+    public Float aLL;
+    @SerializedName("AMD")
+    @Expose
+    public Float aMD;
+    @SerializedName("ANG")
+    @Expose
+    public Float aNG;
+    @SerializedName("AOA")
+    @Expose
+    public Float aOA;
+    @SerializedName("ARS")
+    @Expose
+    public Float aRS;
+    @SerializedName("AUD")
+    @Expose
+    public Float aUD;
+    @SerializedName("AWG")
+    @Expose
+    public Float aWG;
+    @SerializedName("AZN")
+    @Expose
+    public Float aZN;
+    @SerializedName("BAM")
+    @Expose
+    public Float bAM;
+    @SerializedName("BBD")
+    @Expose
+    public Float bBD;
+    @SerializedName("BDT")
+    @Expose
+    public Float bDT;
+    @SerializedName("BGN")
+    @Expose
+    public Float bGN;
+    @SerializedName("BHD")
+    @Expose
+    public Float bHD;
+    @SerializedName("BIF")
+    @Expose
+    public Float bIF;
+    @SerializedName("BMD")
+    @Expose
+    public Float bMD;
+    @SerializedName("BND")
+    @Expose
+    public Float bND;
+    @SerializedName("BOB")
+    @Expose
+    public Float bOB;
+    @SerializedName("BRL")
+    @Expose
+    public Float bRL;
+    @SerializedName("BSD")
+    @Expose
+    public Float bSD;
+    @SerializedName("BTC")
+    @Expose
+    public Float bTC;
+    @SerializedName("BTN")
+    @Expose
+    public Float bTN;
+    @SerializedName("BWP")
+    @Expose
+    public Float bWP;
+    @SerializedName("BYN")
+    @Expose
+    public Float bYN;
+    @SerializedName("BYR")
+    @Expose
+    public Float bYR;
+    @SerializedName("BZD")
+    @Expose
+    public Float bZD;
+    @SerializedName("CAD")
+    @Expose
+    public Float cAD;
+    @SerializedName("CDF")
+    @Expose
+    public Float cDF;
+    @SerializedName("CHF")
+    @Expose
+    public Float cHF;
+    @SerializedName("CLF")
+    @Expose
+    public Float cLF;
+    @SerializedName("CLP")
+    @Expose
+    public Float cLP;
+    @SerializedName("CNY")
+    @Expose
+    public Float cNY;
+    @SerializedName("COP")
+    @Expose
+    public Float cOP;
+    @SerializedName("CRC")
+    @Expose
+    public Float cRC;
+    @SerializedName("CUC")
+    @Expose
+    public Float cUC;
+    @SerializedName("CUP")
+    @Expose
+    public Float cUP;
+    @SerializedName("CVE")
+    @Expose
+    public Float cVE;
+    @SerializedName("CZK")
+    @Expose
+    public Float cZK;
+    @SerializedName("DJF")
+    @Expose
+    public Float dJF;
+    @SerializedName("DKK")
+    @Expose
+    public Float dKK;
+    @SerializedName("DOP")
+    @Expose
+    public Float dOP;
+    @SerializedName("DZD")
+    @Expose
+    public Float dZD;
+    @SerializedName("EGP")
+    @Expose
+    public Float eGP;
+    @SerializedName("ERN")
+    @Expose
+    public Float eRN;
+    @SerializedName("ETB")
+    @Expose
+    public Float eTB;
+    @SerializedName("EUR")
+    @Expose
+    public Integer eUR;
+    @SerializedName("FJD")
+    @Expose
+    public Float fJD;
+    @SerializedName("FKP")
+    @Expose
+    public Float fKP;
+    @SerializedName("GBP")
+    @Expose
+    public Float gBP;
+    @SerializedName("GEL")
+    @Expose
+    public Float gEL;
+    @SerializedName("GGP")
+    @Expose
+    public Float gGP;
+    @SerializedName("GHS")
+    @Expose
+    public Float gHS;
+    @SerializedName("GIP")
+    @Expose
+    public Float gIP;
+    @SerializedName("GMD")
+    @Expose
+    public Float gMD;
+    @SerializedName("GNF")
+    @Expose
+    public Float gNF;
+    @SerializedName("GTQ")
+    @Expose
+    public Float gTQ;
+    @SerializedName("GYD")
+    @Expose
+    public Float gYD;
+    @SerializedName("HKD")
+    @Expose
+    public Float hKD;
+    @SerializedName("HNL")
+    @Expose
+    public Float hNL;
+    @SerializedName("HRK")
+    @Expose
+    public Float hRK;
+    @SerializedName("HTG")
+    @Expose
+    public Float hTG;
+    @SerializedName("HUF")
+    @Expose
+    public Float hUF;
+    @SerializedName("IDR")
+    @Expose
+    public Float iDR;
+    @SerializedName("ILS")
+    @Expose
+    public Float iLS;
+    @SerializedName("IMP")
+    @Expose
+    public Float iMP;
+    @SerializedName("INR")
+    @Expose
+    public Float iNR;
+    @SerializedName("IQD")
+    @Expose
+    public Float iQD;
+    @SerializedName("IRR")
+    @Expose
+    public Float iRR;
+    @SerializedName("ISK")
+    @Expose
+    public Float iSK;
+    @SerializedName("JEP")
+    @Expose
+    public Float jEP;
+    @SerializedName("JMD")
+    @Expose
+    public Float jMD;
+    @SerializedName("JOD")
+    @Expose
+    public Float jOD;
+    @SerializedName("JPY")
+    @Expose
+    public Float jPY;
+    @SerializedName("KES")
+    @Expose
+    public Float kES;
+    @SerializedName("KGS")
+    @Expose
+    public Float kGS;
+    @SerializedName("KHR")
+    @Expose
+    public Float kHR;
+    @SerializedName("KMF")
+    @Expose
+    public Float kMF;
+    @SerializedName("KPW")
+    @Expose
+    public Float kPW;
+    @SerializedName("KRW")
+    @Expose
+    public Float kRW;
+    @SerializedName("KWD")
+    @Expose
+    public Float kWD;
+    @SerializedName("KYD")
+    @Expose
+    public Float kYD;
+    @SerializedName("KZT")
+    @Expose
+    public Float kZT;
+    @SerializedName("LAK")
+    @Expose
+    public Float lAK;
+    @SerializedName("LBP")
+    @Expose
+    public Float lBP;
+    @SerializedName("LKR")
+    @Expose
+    public Float lKR;
+    @SerializedName("LRD")
+    @Expose
+    public Float lRD;
+    @SerializedName("LSL")
+    @Expose
+    public Float lSL;
+    @SerializedName("LTL")
+    @Expose
+    public Float lTL;
+    @SerializedName("LVL")
+    @Expose
+    public Float lVL;
+    @SerializedName("LYD")
+    @Expose
+    public Float lYD;
+    @SerializedName("MAD")
+    @Expose
+    public Float mAD;
+    @SerializedName("MDL")
+    @Expose
+    public Float mDL;
+    @SerializedName("MGA")
+    @Expose
+    public Float mGA;
+    @SerializedName("MKD")
+    @Expose
+    public Float mKD;
+    @SerializedName("MMK")
+    @Expose
+    public Float mMK;
+    @SerializedName("MNT")
+    @Expose
+    public Float mNT;
+    @SerializedName("MOP")
+    @Expose
+    public Float mOP;
+    @SerializedName("MRO")
+    @Expose
+    public Float mRO;
+    @SerializedName("MUR")
+    @Expose
+    public Float mUR;
+    @SerializedName("MVR")
+    @Expose
+    public Float mVR;
+    @SerializedName("MWK")
+    @Expose
+    public Float mWK;
+    @SerializedName("MXN")
+    @Expose
+    public Float mXN;
+    @SerializedName("MYR")
+    @Expose
+    public Float mYR;
+    @SerializedName("MZN")
+    @Expose
+    public Float mZN;
+    @SerializedName("NAD")
+    @Expose
+    public Float nAD;
+    @SerializedName("NGN")
+    @Expose
+    public Float nGN;
+    @SerializedName("NIO")
+    @Expose
+    public Float nIO;
+    @SerializedName("NOK")
+    @Expose
+    public Float nOK;
+    @SerializedName("NPR")
+    @Expose
+    public Float nPR;
+    @SerializedName("NZD")
+    @Expose
+    public Float nZD;
+    @SerializedName("OMR")
+    @Expose
+    public Float oMR;
+    @SerializedName("PAB")
+    @Expose
+    public Float pAB;
+    @SerializedName("PEN")
+    @Expose
+    public Float pEN;
+    @SerializedName("PGK")
+    @Expose
+    public Float pGK;
+    @SerializedName("PHP")
+    @Expose
+    public Float pHP;
+    @SerializedName("PKR")
+    @Expose
+    public Float pKR;
+    @SerializedName("PLN")
+    @Expose
+    public Float pLN;
+    @SerializedName("PYG")
+    @Expose
+    public Float pYG;
+    @SerializedName("QAR")
+    @Expose
+    public Float qAR;
+    @SerializedName("RON")
+    @Expose
+    public Float rON;
+    @SerializedName("RSD")
+    @Expose
+    public Float rSD;
+    @SerializedName("RUB")
+    @Expose
+    public Float rUB;
+    @SerializedName("RWF")
+    @Expose
+    public Float rWF;
+    @SerializedName("SAR")
+    @Expose
+    public Float sAR;
+    @SerializedName("SBD")
+    @Expose
+    public Float sBD;
+    @SerializedName("SCR")
+    @Expose
+    public Float sCR;
+    @SerializedName("SDG")
+    @Expose
+    public Float sDG;
+    @SerializedName("SEK")
+    @Expose
+    public Float sEK;
+    @SerializedName("SGD")
+    @Expose
+    public Float sGD;
+    @SerializedName("SHP")
+    @Expose
+    public Float sHP;
+    @SerializedName("SLL")
+    @Expose
+    public Float sLL;
+    @SerializedName("SOS")
+    @Expose
+    public Float sOS;
+    @SerializedName("SRD")
+    @Expose
+    public Float sRD;
+    @SerializedName("STD")
+    @Expose
+    public Float sTD;
+    @SerializedName("SVC")
+    @Expose
+    public Float sVC;
+    @SerializedName("SYP")
+    @Expose
+    public Float sYP;
+    @SerializedName("SZL")
+    @Expose
+    public Float sZL;
+    @SerializedName("THB")
+    @Expose
+    public Float tHB;
+    @SerializedName("TJS")
+    @Expose
+    public Float tJS;
+    @SerializedName("TMT")
+    @Expose
+    public Float tMT;
+    @SerializedName("TND")
+    @Expose
+    public Float tND;
+    @SerializedName("TOP")
+    @Expose
+    public Float tOP;
+    @SerializedName("TRY")
+    @Expose
+    public Float tRY;
+    @SerializedName("TTD")
+    @Expose
+    public Float tTD;
+    @SerializedName("TWD")
+    @Expose
+    public Float tWD;
+    @SerializedName("TZS")
+    @Expose
+    public Float tZS;
+    @SerializedName("UAH")
+    @Expose
+    public Float uAH;
+    @SerializedName("UGX")
+    @Expose
+    public Float uGX;
+    @SerializedName("USD")
+    @Expose
+    public Float uSD;
+    @SerializedName("UYU")
+    @Expose
+    public Float uYU;
+    @SerializedName("UZS")
+    @Expose
+    public Float uZS;
+    @SerializedName("VEF")
+    @Expose
+    public Float vEF;
+    @SerializedName("VND")
+    @Expose
+    public Float vND;
+    @SerializedName("VUV")
+    @Expose
+    public Float vUV;
+    @SerializedName("WST")
+    @Expose
+    public Float wST;
+    @SerializedName("XAF")
+    @Expose
+    public Float xAF;
+    @SerializedName("XAG")
+    @Expose
+    public Float xAG;
+    @SerializedName("XAU")
+    @Expose
+    public Float xAU;
+    @SerializedName("XCD")
+    @Expose
+    public Float xCD;
+    @SerializedName("XDR")
+    @Expose
+    public Float xDR;
+    @SerializedName("XOF")
+    @Expose
+    public Float xOF;
+    @SerializedName("XPF")
+    @Expose
+    public Float xPF;
+    @SerializedName("YER")
+    @Expose
+    public Float yER;
+    @SerializedName("ZAR")
+    @Expose
+    public Float zAR;
+    @SerializedName("ZMK")
+    @Expose
+    public Float zMK;
+    @SerializedName("ZMW")
+    @Expose
+    public Float zMW;
+    @SerializedName("ZWL")
+    @Expose
+    public Float zWL;
+
     public Float getaED() {
         return aED;
     }
@@ -1349,510 +1854,7 @@ public class RatesResponseApi {
         this.zWL = zWL;
     }
 
-    @SerializedName("AED")
-    @Expose
-    public Float aED;
-    @SerializedName("AFN")
-    @Expose
-    public Float aFN;
-    @SerializedName("ALL")
-    @Expose
-    public Float aLL;
-    @SerializedName("AMD")
-    @Expose
-    public Float aMD;
-    @SerializedName("ANG")
-    @Expose
-    public Float aNG;
-    @SerializedName("AOA")
-    @Expose
-    public Float aOA;
-    @SerializedName("ARS")
-    @Expose
-    public Float aRS;
-    @SerializedName("AUD")
-    @Expose
-    public Float aUD;
-    @SerializedName("AWG")
-    @Expose
-    public Float aWG;
-    @SerializedName("AZN")
-    @Expose
-    public Float aZN;
-    @SerializedName("BAM")
-    @Expose
-    public Float bAM;
-    @SerializedName("BBD")
-    @Expose
-    public Float bBD;
-    @SerializedName("BDT")
-    @Expose
-    public Float bDT;
-    @SerializedName("BGN")
-    @Expose
-    public Float bGN;
-    @SerializedName("BHD")
-    @Expose
-    public Float bHD;
-    @SerializedName("BIF")
-    @Expose
-    public Float bIF;
-    @SerializedName("BMD")
-    @Expose
-    public Float bMD;
-    @SerializedName("BND")
-    @Expose
-    public Float bND;
-    @SerializedName("BOB")
-    @Expose
-    public Float bOB;
-    @SerializedName("BRL")
-    @Expose
-    public Float bRL;
-    @SerializedName("BSD")
-    @Expose
-    public Float bSD;
-    @SerializedName("BTC")
-    @Expose
-    public Float bTC;
-    @SerializedName("BTN")
-    @Expose
-    public Float bTN;
-    @SerializedName("BWP")
-    @Expose
-    public Float bWP;
-    @SerializedName("BYN")
-    @Expose
-    public Float bYN;
-    @SerializedName("BYR")
-    @Expose
-    public Float bYR;
-    @SerializedName("BZD")
-    @Expose
-    public Float bZD;
-    @SerializedName("CAD")
-    @Expose
-    public Float cAD;
-    @SerializedName("CDF")
-    @Expose
-    public Float cDF;
-    @SerializedName("CHF")
-    @Expose
-    public Float cHF;
-    @SerializedName("CLF")
-    @Expose
-    public Float cLF;
-    @SerializedName("CLP")
-    @Expose
-    public Float cLP;
-    @SerializedName("CNY")
-    @Expose
-    public Float cNY;
-    @SerializedName("COP")
-    @Expose
-    public Float cOP;
-    @SerializedName("CRC")
-    @Expose
-    public Float cRC;
-    @SerializedName("CUC")
-    @Expose
-    public Float cUC;
-    @SerializedName("CUP")
-    @Expose
-    public Float cUP;
-    @SerializedName("CVE")
-    @Expose
-    public Float cVE;
-    @SerializedName("CZK")
-    @Expose
-    public Float cZK;
-    @SerializedName("DJF")
-    @Expose
-    public Float dJF;
-    @SerializedName("DKK")
-    @Expose
-    public Float dKK;
-    @SerializedName("DOP")
-    @Expose
-    public Float dOP;
-    @SerializedName("DZD")
-    @Expose
-    public Float dZD;
-    @SerializedName("EGP")
-    @Expose
-    public Float eGP;
-    @SerializedName("ERN")
-    @Expose
-    public Float eRN;
-    @SerializedName("ETB")
-    @Expose
-    public Float eTB;
-    @SerializedName("EUR")
-    @Expose
-    public Integer eUR;
-    @SerializedName("FJD")
-    @Expose
-    public Float fJD;
-    @SerializedName("FKP")
-    @Expose
-    public Float fKP;
-    @SerializedName("GBP")
-    @Expose
-    public Float gBP;
-    @SerializedName("GEL")
-    @Expose
-    public Float gEL;
-    @SerializedName("GGP")
-    @Expose
-    public Float gGP;
-    @SerializedName("GHS")
-    @Expose
-    public Float gHS;
-    @SerializedName("GIP")
-    @Expose
-    public Float gIP;
-    @SerializedName("GMD")
-    @Expose
-    public Float gMD;
-    @SerializedName("GNF")
-    @Expose
-    public Float gNF;
-    @SerializedName("GTQ")
-    @Expose
-    public Float gTQ;
-    @SerializedName("GYD")
-    @Expose
-    public Float gYD;
-    @SerializedName("HKD")
-    @Expose
-    public Float hKD;
-    @SerializedName("HNL")
-    @Expose
-    public Float hNL;
-    @SerializedName("HRK")
-    @Expose
-    public Float hRK;
-    @SerializedName("HTG")
-    @Expose
-    public Float hTG;
-    @SerializedName("HUF")
-    @Expose
-    public Float hUF;
-    @SerializedName("IDR")
-    @Expose
-    public Float iDR;
-    @SerializedName("ILS")
-    @Expose
-    public Float iLS;
-    @SerializedName("IMP")
-    @Expose
-    public Float iMP;
-    @SerializedName("INR")
-    @Expose
-    public Float iNR;
-    @SerializedName("IQD")
-    @Expose
-    public Float iQD;
-    @SerializedName("IRR")
-    @Expose
-    public Float iRR;
-    @SerializedName("ISK")
-    @Expose
-    public Float iSK;
-    @SerializedName("JEP")
-    @Expose
-    public Float jEP;
-    @SerializedName("JMD")
-    @Expose
-    public Float jMD;
-    @SerializedName("JOD")
-    @Expose
-    public Float jOD;
-    @SerializedName("JPY")
-    @Expose
-    public Float jPY;
-    @SerializedName("KES")
-    @Expose
-    public Float kES;
-    @SerializedName("KGS")
-    @Expose
-    public Float kGS;
-    @SerializedName("KHR")
-    @Expose
-    public Float kHR;
-    @SerializedName("KMF")
-    @Expose
-    public Float kMF;
-    @SerializedName("KPW")
-    @Expose
-    public Float kPW;
-    @SerializedName("KRW")
-    @Expose
-    public Float kRW;
-    @SerializedName("KWD")
-    @Expose
-    public Float kWD;
-    @SerializedName("KYD")
-    @Expose
-    public Float kYD;
-    @SerializedName("KZT")
-    @Expose
-    public Float kZT;
-    @SerializedName("LAK")
-    @Expose
-    public Float lAK;
-    @SerializedName("LBP")
-    @Expose
-    public Float lBP;
-    @SerializedName("LKR")
-    @Expose
-    public Float lKR;
-    @SerializedName("LRD")
-    @Expose
-    public Float lRD;
-    @SerializedName("LSL")
-    @Expose
-    public Float lSL;
-    @SerializedName("LTL")
-    @Expose
-    public Float lTL;
-    @SerializedName("LVL")
-    @Expose
-    public Float lVL;
-    @SerializedName("LYD")
-    @Expose
-    public Float lYD;
-    @SerializedName("MAD")
-    @Expose
-    public Float mAD;
-    @SerializedName("MDL")
-    @Expose
-    public Float mDL;
-    @SerializedName("MGA")
-    @Expose
-    public Float mGA;
-    @SerializedName("MKD")
-    @Expose
-    public Float mKD;
-    @SerializedName("MMK")
-    @Expose
-    public Float mMK;
-    @SerializedName("MNT")
-    @Expose
-    public Float mNT;
-    @SerializedName("MOP")
-    @Expose
-    public Float mOP;
-    @SerializedName("MRO")
-    @Expose
-    public Float mRO;
-    @SerializedName("MUR")
-    @Expose
-    public Float mUR;
-    @SerializedName("MVR")
-    @Expose
-    public Float mVR;
-    @SerializedName("MWK")
-    @Expose
-    public Float mWK;
-    @SerializedName("MXN")
-    @Expose
-    public Float mXN;
-    @SerializedName("MYR")
-    @Expose
-    public Float mYR;
-    @SerializedName("MZN")
-    @Expose
-    public Float mZN;
-    @SerializedName("NAD")
-    @Expose
-    public Float nAD;
-    @SerializedName("NGN")
-    @Expose
-    public Float nGN;
-    @SerializedName("NIO")
-    @Expose
-    public Float nIO;
-    @SerializedName("NOK")
-    @Expose
-    public Float nOK;
-    @SerializedName("NPR")
-    @Expose
-    public Float nPR;
-    @SerializedName("NZD")
-    @Expose
-    public Float nZD;
-    @SerializedName("OMR")
-    @Expose
-    public Float oMR;
-    @SerializedName("PAB")
-    @Expose
-    public Float pAB;
-    @SerializedName("PEN")
-    @Expose
-    public Float pEN;
-    @SerializedName("PGK")
-    @Expose
-    public Float pGK;
-    @SerializedName("PHP")
-    @Expose
-    public Float pHP;
-    @SerializedName("PKR")
-    @Expose
-    public Float pKR;
-    @SerializedName("PLN")
-    @Expose
-    public Float pLN;
-    @SerializedName("PYG")
-    @Expose
-    public Float pYG;
-    @SerializedName("QAR")
-    @Expose
-    public Float qAR;
-    @SerializedName("RON")
-    @Expose
-    public Float rON;
-    @SerializedName("RSD")
-    @Expose
-    public Float rSD;
-    @SerializedName("RUB")
-    @Expose
-    public Float rUB;
-    @SerializedName("RWF")
-    @Expose
-    public Float rWF;
-    @SerializedName("SAR")
-    @Expose
-    public Float sAR;
-    @SerializedName("SBD")
-    @Expose
-    public Float sBD;
-    @SerializedName("SCR")
-    @Expose
-    public Float sCR;
-    @SerializedName("SDG")
-    @Expose
-    public Float sDG;
-    @SerializedName("SEK")
-    @Expose
-    public Float sEK;
-    @SerializedName("SGD")
-    @Expose
-    public Float sGD;
-    @SerializedName("SHP")
-    @Expose
-    public Float sHP;
-    @SerializedName("SLL")
-    @Expose
-    public Float sLL;
-    @SerializedName("SOS")
-    @Expose
-    public Float sOS;
-    @SerializedName("SRD")
-    @Expose
-    public Float sRD;
-    @SerializedName("STD")
-    @Expose
-    public Float sTD;
-    @SerializedName("SVC")
-    @Expose
-    public Float sVC;
-    @SerializedName("SYP")
-    @Expose
-    public Float sYP;
-    @SerializedName("SZL")
-    @Expose
-    public Float sZL;
-    @SerializedName("THB")
-    @Expose
-    public Float tHB;
-    @SerializedName("TJS")
-    @Expose
-    public Float tJS;
-    @SerializedName("TMT")
-    @Expose
-    public Float tMT;
-    @SerializedName("TND")
-    @Expose
-    public Float tND;
-    @SerializedName("TOP")
-    @Expose
-    public Float tOP;
-    @SerializedName("TRY")
-    @Expose
-    public Float tRY;
-    @SerializedName("TTD")
-    @Expose
-    public Float tTD;
-    @SerializedName("TWD")
-    @Expose
-    public Float tWD;
-    @SerializedName("TZS")
-    @Expose
-    public Float tZS;
-    @SerializedName("UAH")
-    @Expose
-    public Float uAH;
-    @SerializedName("UGX")
-    @Expose
-    public Float uGX;
-    @SerializedName("USD")
-    @Expose
-    public Float uSD;
-    @SerializedName("UYU")
-    @Expose
-    public Float uYU;
-    @SerializedName("UZS")
-    @Expose
-    public Float uZS;
-    @SerializedName("VEF")
-    @Expose
-    public Float vEF;
-    @SerializedName("VND")
-    @Expose
-    public Float vND;
-    @SerializedName("VUV")
-    @Expose
-    public Float vUV;
-    @SerializedName("WST")
-    @Expose
-    public Float wST;
-    @SerializedName("XAF")
-    @Expose
-    public Float xAF;
-    @SerializedName("XAG")
-    @Expose
-    public Float xAG;
-    @SerializedName("XAU")
-    @Expose
-    public Float xAU;
-    @SerializedName("XCD")
-    @Expose
-    public Float xCD;
-    @SerializedName("XDR")
-    @Expose
-    public Float xDR;
-    @SerializedName("XOF")
-    @Expose
-    public Float xOF;
-    @SerializedName("XPF")
-    @Expose
-    public Float xPF;
-    @SerializedName("YER")
-    @Expose
-    public Float yER;
-    @SerializedName("ZAR")
-    @Expose
-    public Float zAR;
-    @SerializedName("ZMK")
-    @Expose
-    public Float zMK;
-    @SerializedName("ZMW")
-    @Expose
-    public Float zMW;
-    @SerializedName("ZWL")
-    @Expose
-    public Float zWL;
+
 
     @Override
     public String toString() {
@@ -2027,4 +2029,6 @@ public class RatesResponseApi {
                 ", zWL=" + zWL +
                 '}';
     }
+
+
 }
