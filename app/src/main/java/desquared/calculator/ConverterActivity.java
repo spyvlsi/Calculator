@@ -17,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,7 +34,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     float amount, result;
     String toSpnValue;
     TextView textResult;
-    private PlaceHolderApi placeHolderApi;
     private static final String BASE_URL = "http://data.fixer.io/api/";
     private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
 
@@ -59,11 +60,17 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                 } else if (spinnerTo.getSelectedItemPosition() == 0) {
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
+
                     amount = Float.parseFloat(txt_amount.getText() + "");
 //                    result = to_rate.getRate()*(1/baserate.getRate())*amount;
+
+                    Gson gson = new GsonBuilder()
+                            .setLenient()
+                            .create();
+
                     Retrofit retrofit = new Retrofit.Builder()
                             .baseUrl(BASE_URL)
-                            .addConverterFactory(GsonConverterFactory.create())
+                            .addConverterFactory(GsonConverterFactory.create(gson))
                             .build();
                     PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
                     Call<ApiResponse> call = placeHolderApi.getLatest(API_KEY);
