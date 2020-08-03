@@ -36,10 +36,11 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     EditText txt_amount;
     Button convertBtn;
     Spinner spinnerTo;
-    float amount, result;
+    float amount;
     String toSpnValue;
     TextView textResult;
     double final_toRate;
+    double final_result;
     private static final String BASE_URL = "http://data.fixer.io/api/";
     private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
 
@@ -67,7 +68,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
 
-                    amount = Float.parseFloat(txt_amount.getText() + "");
+
 
                     Gson gson = new GsonBuilder()
                             .setLenient()
@@ -85,7 +86,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                         public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
                             if (!response.isSuccessful()) {
                                 textResult.setText("Code: " + response.code());
-                                return;
                             } else if (response.isSuccessful()) {
                                 ApiResponse apiResponse = response.body();
 
@@ -115,6 +115,9 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                                 }
 
                                 final_toRate = map.get(toSpnValue);
+                                amount = Float.parseFloat(txt_amount.getText() + "");
+                                final_result = final_toRate * amount;
+                                textResult.setText(String.valueOf(final_result));
                             }
                         }
 
