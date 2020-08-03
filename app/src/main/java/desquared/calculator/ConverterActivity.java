@@ -69,7 +69,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                 } else {
 
 
-
                     Gson gson = new GsonBuilder()
                             .setLenient()
                             .create();
@@ -89,7 +88,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                             } else if (response.isSuccessful()) {
                                 ApiResponse apiResponse = response.body();
 
-                                Field fields[] = RatesResponseApi.class.getDeclaredFields();
+                                Field fields[] = RatesResponseApi.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
                                 List<String> currencies = new ArrayList<String>();
                                 List<Double> rates = new ArrayList<Double>();
 
@@ -97,21 +96,21 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                                 double d_help;
                                 String str_help;
                                 Object value;
-                                for (Field field : fields) {
-                                    currencies.add(index, field.getName().toUpperCase());
+                                for (Field field : fields) {        //instert
+                                    currencies.add(index, field.getName().toUpperCase()); //array fill with the names
                                     try {
                                         value = field.get(apiResponse.rates);
                                         str_help = value.toString();
                                         d_help = Double.valueOf(str_help).doubleValue();
-                                        rates.add(index, d_help);
+                                        rates.add(index, d_help);  //array fills with the rates
                                     } catch (IllegalAccessException e) {
                                         e.printStackTrace();
                                     }
                                     index++;
                                 }
-                                HashMap<String, Double> map= new HashMap<>();
-                                for(int i = 0; i<currencies.size(); i++){
-                                    map.put(currencies.get(i),rates.get(i));
+                                HashMap<String, Double> map = new HashMap<>();  //hashmap creation with the currency names and their values
+                                for (int i = 0; i < currencies.size(); i++) {
+                                    map.put(currencies.get(i), rates.get(i));
                                 }
 
                                 final_toRate = map.get(toSpnValue);
