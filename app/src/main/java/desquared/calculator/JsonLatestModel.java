@@ -1,27 +1,29 @@
 package desquared.calculator;
 
+import androidx.annotation.NonNull;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ApiResponse {
+public class JsonLatestModel {
 
     @SerializedName("success")
     @Expose
-    public boolean success;
+    private boolean success;
     @SerializedName("timestamp")
     @Expose
-    public int timestamp;
+    private int timestamp;
     @SerializedName("base")
     @Expose
-    public String base;
+    private String base;
     @SerializedName("date")
     @Expose
-    public String date;
+    private String date;
     @SerializedName("rates")
     @Expose
-    public RatesResponseApi rates;
+    public JsonRatesModel rates;
 
-    public ApiResponse(boolean success, int timestamp, String base, String date, RatesResponseApi rates) {
+    public JsonLatestModel(boolean success, int timestamp, String base, String date, JsonRatesModel rates) {
         this.success = success;
         this.timestamp = timestamp;
         this.base = base;
@@ -61,15 +63,16 @@ public class ApiResponse {
         this.date = date;
     }
 
-    public RatesResponseApi getRates() {
+    public JsonRatesModel getRates() {
         return rates;
     }
 
-    public void setRates(RatesResponseApi rates) {
+    public void setRates(JsonRatesModel rates) {
         this.rates = rates;
     }
 
     @Override
+    @NonNull
     public String toString() {
         return "ApiResponse{" +
                 "success=" + success +

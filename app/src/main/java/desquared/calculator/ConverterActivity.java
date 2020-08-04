@@ -18,10 +18,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
-import java.lang.reflect.*;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -71,10 +69,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
 
-                    Thread.dumpStack();
-                    Gson gson = new GsonBuilder()
-                            .setLenient()
-                            .create();
+//                    Thread.dumpStack();
 
                     HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
                     loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -84,23 +79,23 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 
                     Retrofit retrofit = new Retrofit.Builder()
                             .baseUrl(BASE_URL)
-                            .addConverterFactory(GsonConverterFactory.create(gson))
+                            .addConverterFactory(GsonConverterFactory.create())
                             .client(okHttpClient)
                             .build();
                     PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
-                    Call<ApiResponse> call = placeHolderApi.getLatest(API_KEY);
+                    Call<JsonLatestModel> call = placeHolderApi.getLatest(API_KEY);
 
-                    call.enqueue(new Callback<ApiResponse>() {
+                    call.enqueue(new Callback<JsonLatestModel>() {
                         @Override
-                        public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
+                        public void onResponse(Call<JsonLatestModel> call, Response<JsonLatestModel> response) {
                             if (!response.isSuccessful()) {
-                                Log.d("message", "NOT ok HERE");
-                                textResult.setText("Code: " + response.code());
+                                Log.d("RESPONSE", "NOT OK");
+                                //textResult.setText("Code: " + response.code());
                             }
-                            Log.d("message", "ok HERE");
-                            ApiResponse apiResponse = response.body();
+                            Log.i("RESPONSE", "OK");
+                            JsonLatestModel jsonLatestModel = response.body();
 
-//                                Field fields[] = RatesResponseApi.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
+//                                Field fields[] = JsonRatesModel.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
 //                                List<String> currencies = new ArrayList<String>();
 //                                List<Double> rates = new ArrayList<Double>();
 //
@@ -111,7 +106,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 //                                for (Field field : fields) {        //instert
 //                                    currencies.add(index, field.getName().toUpperCase()); //array fill with the names
 //                                    try {
-//                                        value = field.get(apiResponse.rates);
+//                                        value = field.get(jsonLatestModel.rates);
 //                                        str_help = value.toString();
 //                                        d_help = Double.valueOf(str_help).doubleValue();
 //                                        rates.add(index, d_help);  //array fills with the rates
@@ -133,7 +128,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                         }
 
                         @Override
-                        public void onFailure(Call<ApiResponse> call, Throwable t) {
+                        public void onFailure(Call<JsonLatestModel> call, Throwable t) {
                             textResult.setText(t.getMessage());
 
                         }

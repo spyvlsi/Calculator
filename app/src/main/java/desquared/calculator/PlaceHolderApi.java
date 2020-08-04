@@ -7,6 +7,6 @@ import retrofit2.http.Query;
 public interface PlaceHolderApi {
 
     @GET("latest")
-    Call<ApiResponse> getLatest(
+    Call<JsonLatestModel> getLatest(
             @Query("access_key") String access_key);
 }
