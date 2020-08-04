@@ -18,21 +18,27 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.GET;
+
+import static com.android.volley.Request.*;
 
 public class ConverterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -47,6 +53,8 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     private static final String BASE_URL = "http://data.fixer.io/api/";
     private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
     private static final String IMG = "https://www.thomascook.in/images/currency-img.jpg";
+    private static final String VOLLEY_URL = "http://data.fixer.io/api/latest?access_key=d628c113e9c378a58d31982c03e19a6b";
+    private RequestQueue mQueue;
 
 
     @Override
@@ -62,7 +70,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
         convertBtn = findViewById(R.id.convBtn);
         textResult = findViewById(R.id.restxt2);
 
-
+        mQueue = Volley.newRequestQueue(this);
         convertBtn.setOnClickListener(new View.OnClickListener() {
 
             @Nullable
@@ -75,8 +83,28 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
 
-//                    Thread.dumpStack();
+//                    StringRequest stringRequest = new StringRequest(Request.Method.GET, VOLLEY_URL,
+//                            new Response.Listener<String>() {
+//                                @Override
+//                                public void onResponse(String response) {
+//                                    // Display the first 500 characters of the response string.
+//                                    Log.i("RESPONSE", response);
+//                                    textResult.setText(response);
+//                                }
+//                            }, new Response.ErrorListener() {
+//                        @Override
+//                        public void onErrorResponse(VolleyError error) {
+//                            textResult.setText("That didn't work!");
+//                            error.printStackTrace();
+//                        }
+//                    });
+//                    mQueue.add(stringRequest);
 
+
+
+
+//                    Thread.dumpStack();
+//
                     HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
                     loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
                     OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -92,13 +120,15 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     Call<JsonLatestModel> call = placeHolderApi.getLatest(API_KEY);
 
                     call.enqueue(new Callback<JsonLatestModel>() {
+
                         @Override
-                        public void onResponse(Call<JsonLatestModel> call, Response<JsonLatestModel> response) {
+                        public void onResponse(Call<JsonLatestModel> call, retrofit2.Response<JsonLatestModel> response) {
                             if (!response.isSuccessful()) {
                                 Log.d("RESPONSE", "NOT OK");
                                 //textResult.setText("Code: " + response.code());
                             }
-                            Log.i("RESPONSE", "OK");
+                            Log.i("RESPONSE", String.valueOf(response));
+                            textResult.setText("DONE");
                             JsonLatestModel jsonLatestModel = response.body();
 
 //                                Field fields[] = JsonRatesModel.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
