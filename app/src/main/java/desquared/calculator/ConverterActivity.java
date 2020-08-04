@@ -14,9 +14,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.lang.reflect.Field;
@@ -44,12 +46,16 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     double final_result;
     private static final String BASE_URL = "http://data.fixer.io/api/";
     private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
+    private static final String IMG = "https://www.thomascook.in/images/currency-img.jpg";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
+
+        ImageView imageView = (ImageView) findViewById(R.id.image);
+        Glide.with(this).load(IMG).into(imageView);
 
         txt_amount = findViewById(R.id.amount_field);
         spinnerTo = findViewById(R.id.to_spinner);
