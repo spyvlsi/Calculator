@@ -8,5 +8,5 @@ public interface PlaceHolderApi {
 
     @GET("latest")
     Call<ApiResponse> getLatest(
-            @Query("access_key") String apiKey);
+            @Query("access_key") String access_key);
 }

@@ -7,10 +7,10 @@ public class ApiResponse {
 
     @SerializedName("success")
     @Expose
-    public Boolean success;
+    public boolean success;
     @SerializedName("timestamp")
     @Expose
-    public Integer timestamp;
+    public int timestamp;
     @SerializedName("base")
     @Expose
     public String base;
@@ -21,7 +21,7 @@ public class ApiResponse {
     @Expose
     public RatesResponseApi rates;
 
-    public ApiResponse(Boolean success, Integer timestamp, String base, String date, RatesResponseApi rates) {
+    public ApiResponse(boolean success, int timestamp, String base, String date, RatesResponseApi rates) {
         this.success = success;
         this.timestamp = timestamp;
         this.base = base;
@@ -29,19 +29,19 @@ public class ApiResponse {
         this.rates = rates;
     }
 
-    public Boolean getSuccess() {
+    public boolean isSuccess() {
         return success;
     }
 
-    public void setSuccess(Boolean success) {
+    public void setSuccess(boolean success) {
         this.success = success;
     }
 
-    public Integer getTimestamp() {
+    public int getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Integer timestamp) {
+    public void setTimestamp(int timestamp) {
         this.timestamp = timestamp;
     }
 

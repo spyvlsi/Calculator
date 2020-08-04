@@ -7,1854 +7,2023 @@ public class RatesResponseApi {
 
     @SerializedName("AED")
     @Expose
-    public Float aED;
+    public float aED;
     @SerializedName("AFN")
     @Expose
-    public Float aFN;
+    public float aFN;
     @SerializedName("ALL")
     @Expose
-    public Float aLL;
+    public float aLL;
     @SerializedName("AMD")
     @Expose
-    public Float aMD;
+    public float aMD;
     @SerializedName("ANG")
     @Expose
-    public Float aNG;
+    public float aNG;
     @SerializedName("AOA")
     @Expose
-    public Float aOA;
+    public float aOA;
     @SerializedName("ARS")
     @Expose
-    public Float aRS;
+    public float aRS;
     @SerializedName("AUD")
     @Expose
-    public Float aUD;
+    public float aUD;
     @SerializedName("AWG")
     @Expose
-    public Float aWG;
+    public float aWG;
     @SerializedName("AZN")
     @Expose
-    public Float aZN;
+    public float aZN;
     @SerializedName("BAM")
     @Expose
-    public Float bAM;
+    public float bAM;
     @SerializedName("BBD")
     @Expose
-    public Float bBD;
+    public float bBD;
     @SerializedName("BDT")
     @Expose
-    public Float bDT;
+    public float bDT;
     @SerializedName("BGN")
     @Expose
-    public Float bGN;
+    public float bGN;
     @SerializedName("BHD")
     @Expose
-    public Float bHD;
+    public float bHD;
     @SerializedName("BIF")
     @Expose
-    public Float bIF;
+    public float bIF;
     @SerializedName("BMD")
     @Expose
-    public Float bMD;
+    public float bMD;
     @SerializedName("BND")
     @Expose
-    public Float bND;
+    public float bND;
     @SerializedName("BOB")
     @Expose
-    public Float bOB;
+    public float bOB;
     @SerializedName("BRL")
     @Expose
-    public Float bRL;
+    public float bRL;
     @SerializedName("BSD")
     @Expose
-    public Float bSD;
+    public float bSD;
     @SerializedName("BTC")
     @Expose
-    public Float bTC;
+    public float bTC;
     @SerializedName("BTN")
     @Expose
-    public Float bTN;
+    public float bTN;
     @SerializedName("BWP")
     @Expose
-    public Float bWP;
+    public float bWP;
     @SerializedName("BYN")
     @Expose
-    public Float bYN;
+    public float bYN;
     @SerializedName("BYR")
     @Expose
-    public Float bYR;
+    public float bYR;
     @SerializedName("BZD")
     @Expose
-    public Float bZD;
+    public float bZD;
     @SerializedName("CAD")
     @Expose
-    public Float cAD;
+    public float cAD;
     @SerializedName("CDF")
     @Expose
-    public Float cDF;
+    public float cDF;
     @SerializedName("CHF")
     @Expose
-    public Float cHF;
+    public float cHF;
     @SerializedName("CLF")
     @Expose
-    public Float cLF;
+    public float cLF;
     @SerializedName("CLP")
     @Expose
-    public Float cLP;
+    public float cLP;
     @SerializedName("CNY")
     @Expose
-    public Float cNY;
+    public float cNY;
     @SerializedName("COP")
     @Expose
-    public Float cOP;
+    public float cOP;
     @SerializedName("CRC")
     @Expose
-    public Float cRC;
+    public float cRC;
     @SerializedName("CUC")
     @Expose
-    public Float cUC;
+    public float cUC;
     @SerializedName("CUP")
     @Expose
-    public Float cUP;
+    public float cUP;
     @SerializedName("CVE")
     @Expose
-    public Float cVE;
+    public float cVE;
     @SerializedName("CZK")
     @Expose
-    public Float cZK;
+    public float cZK;
     @SerializedName("DJF")
     @Expose
-    public Float dJF;
+    public float dJF;
     @SerializedName("DKK")
     @Expose
-    public Float dKK;
+    public float dKK;
     @SerializedName("DOP")
     @Expose
-    public Float dOP;
+    public float dOP;
     @SerializedName("DZD")
     @Expose
-    public Float dZD;
+    public float dZD;
     @SerializedName("EGP")
     @Expose
-    public Float eGP;
+    public float eGP;
     @SerializedName("ERN")
     @Expose
-    public Float eRN;
+    public float eRN;
     @SerializedName("ETB")
     @Expose
-    public Float eTB;
+    public float eTB;
     @SerializedName("EUR")
     @Expose
-    public Integer eUR;
+    public int eUR;
     @SerializedName("FJD")
     @Expose
-    public Float fJD;
+    public float fJD;
     @SerializedName("FKP")
     @Expose
-    public Float fKP;
+    public float fKP;
     @SerializedName("GBP")
     @Expose
-    public Float gBP;
+    public float gBP;
     @SerializedName("GEL")
     @Expose
-    public Float gEL;
+    public float gEL;
     @SerializedName("GGP")
     @Expose
-    public Float gGP;
+    public float gGP;
     @SerializedName("GHS")
     @Expose
-    public Float gHS;
+    public float gHS;
     @SerializedName("GIP")
     @Expose
-    public Float gIP;
+    public float gIP;
     @SerializedName("GMD")
     @Expose
-    public Float gMD;
+    public float gMD;
     @SerializedName("GNF")
     @Expose
-    public Float gNF;
+    public float gNF;
     @SerializedName("GTQ")
     @Expose
-    public Float gTQ;
+    public float gTQ;
     @SerializedName("GYD")
     @Expose
-    public Float gYD;
+    public float gYD;
     @SerializedName("HKD")
     @Expose
-    public Float hKD;
+    public float hKD;
     @SerializedName("HNL")
     @Expose
-    public Float hNL;
+    public float hNL;
     @SerializedName("HRK")
     @Expose
-    public Float hRK;
+    public float hRK;
     @SerializedName("HTG")
     @Expose
-    public Float hTG;
+    public float hTG;
     @SerializedName("HUF")
     @Expose
-    public Float hUF;
+    public float hUF;
     @SerializedName("IDR")
     @Expose
-    public Float iDR;
+    public float iDR;
     @SerializedName("ILS")
     @Expose
-    public Float iLS;
+    public float iLS;
     @SerializedName("IMP")
     @Expose
-    public Float iMP;
+    public float iMP;
     @SerializedName("INR")
     @Expose
-    public Float iNR;
+    public float iNR;
     @SerializedName("IQD")
     @Expose
-    public Float iQD;
+    public float iQD;
     @SerializedName("IRR")
     @Expose
-    public Float iRR;
+    public float iRR;
     @SerializedName("ISK")
     @Expose
-    public Float iSK;
+    public float iSK;
     @SerializedName("JEP")
     @Expose
-    public Float jEP;
+    public float jEP;
     @SerializedName("JMD")
     @Expose
-    public Float jMD;
+    public float jMD;
     @SerializedName("JOD")
     @Expose
-    public Float jOD;
+    public float jOD;
     @SerializedName("JPY")
     @Expose
-    public Float jPY;
+    public float jPY;
     @SerializedName("KES")
     @Expose
-    public Float kES;
+    public float kES;
     @SerializedName("KGS")
     @Expose
-    public Float kGS;
+    public float kGS;
     @SerializedName("KHR")
     @Expose
-    public Float kHR;
+    public float kHR;
     @SerializedName("KMF")
     @Expose
-    public Float kMF;
+    public float kMF;
     @SerializedName("KPW")
     @Expose
-    public Float kPW;
+    public float kPW;
     @SerializedName("KRW")
     @Expose
-    public Float kRW;
+    public float kRW;
     @SerializedName("KWD")
     @Expose
-    public Float kWD;
+    public float kWD;
     @SerializedName("KYD")
     @Expose
-    public Float kYD;
+    public float kYD;
     @SerializedName("KZT")
     @Expose
-    public Float kZT;
+    public float kZT;
     @SerializedName("LAK")
     @Expose
-    public Float lAK;
+    public float lAK;
     @SerializedName("LBP")
     @Expose
-    public Float lBP;
+    public float lBP;
     @SerializedName("LKR")
     @Expose
-    public Float lKR;
+    public float lKR;
     @SerializedName("LRD")
     @Expose
-    public Float lRD;
+    public float lRD;
     @SerializedName("LSL")
     @Expose
-    public Float lSL;
+    public float lSL;
     @SerializedName("LTL")
     @Expose
-    public Float lTL;
+    public float lTL;
     @SerializedName("LVL")
     @Expose
-    public Float lVL;
+    public float lVL;
     @SerializedName("LYD")
     @Expose
-    public Float lYD;
+    public float lYD;
     @SerializedName("MAD")
     @Expose
-    public Float mAD;
+    public float mAD;
     @SerializedName("MDL")
     @Expose
-    public Float mDL;
+    public float mDL;
     @SerializedName("MGA")
     @Expose
-    public Float mGA;
+    public float mGA;
     @SerializedName("MKD")
     @Expose
-    public Float mKD;
+    public float mKD;
     @SerializedName("MMK")
     @Expose
-    public Float mMK;
+    public float mMK;
     @SerializedName("MNT")
     @Expose
-    public Float mNT;
+    public float mNT;
     @SerializedName("MOP")
     @Expose
-    public Float mOP;
+    public float mOP;
     @SerializedName("MRO")
     @Expose
-    public Float mRO;
+    public float mRO;
     @SerializedName("MUR")
     @Expose
-    public Float mUR;
+    public float mUR;
     @SerializedName("MVR")
     @Expose
-    public Float mVR;
+    public float mVR;
     @SerializedName("MWK")
     @Expose
-    public Float mWK;
+    public float mWK;
     @SerializedName("MXN")
     @Expose
-    public Float mXN;
+    public float mXN;
     @SerializedName("MYR")
     @Expose
-    public Float mYR;
+    public float mYR;
     @SerializedName("MZN")
     @Expose
-    public Float mZN;
+    public float mZN;
     @SerializedName("NAD")
     @Expose
-    public Float nAD;
+    public float nAD;
     @SerializedName("NGN")
     @Expose
-    public Float nGN;
+    public float nGN;
     @SerializedName("NIO")
     @Expose
-    public Float nIO;
+    public float nIO;
     @SerializedName("NOK")
     @Expose
-    public Float nOK;
+    public float nOK;
     @SerializedName("NPR")
     @Expose
-    public Float nPR;
+    public float nPR;
     @SerializedName("NZD")
     @Expose
-    public Float nZD;
+    public float nZD;
     @SerializedName("OMR")
     @Expose
-    public Float oMR;
+    public float oMR;
     @SerializedName("PAB")
     @Expose
-    public Float pAB;
+    public float pAB;
     @SerializedName("PEN")
     @Expose
-    public Float pEN;
+    public float pEN;
     @SerializedName("PGK")
     @Expose
-    public Float pGK;
+    public float pGK;
     @SerializedName("PHP")
     @Expose
-    public Float pHP;
+    public float pHP;
     @SerializedName("PKR")
     @Expose
-    public Float pKR;
+    public float pKR;
     @SerializedName("PLN")
     @Expose
-    public Float pLN;
+    public float pLN;
     @SerializedName("PYG")
     @Expose
-    public Float pYG;
+    public float pYG;
     @SerializedName("QAR")
     @Expose
-    public Float qAR;
+    public float qAR;
     @SerializedName("RON")
     @Expose
-    public Float rON;
+    public float rON;
     @SerializedName("RSD")
     @Expose
-    public Float rSD;
+    public float rSD;
     @SerializedName("RUB")
     @Expose
-    public Float rUB;
+    public float rUB;
     @SerializedName("RWF")
     @Expose
-    public Float rWF;
+    public float rWF;
     @SerializedName("SAR")
     @Expose
-    public Float sAR;
+    public float sAR;
     @SerializedName("SBD")
     @Expose
-    public Float sBD;
+    public float sBD;
     @SerializedName("SCR")
     @Expose
-    public Float sCR;
+    public float sCR;
     @SerializedName("SDG")
     @Expose
-    public Float sDG;
+    public float sDG;
     @SerializedName("SEK")
     @Expose
-    public Float sEK;
+    public float sEK;
     @SerializedName("SGD")
     @Expose
-    public Float sGD;
+    public float sGD;
     @SerializedName("SHP")
     @Expose
-    public Float sHP;
+    public float sHP;
     @SerializedName("SLL")
     @Expose
-    public Float sLL;
+    public float sLL;
     @SerializedName("SOS")
     @Expose
-    public Float sOS;
+    public float sOS;
     @SerializedName("SRD")
     @Expose
-    public Float sRD;
+    public float sRD;
     @SerializedName("STD")
     @Expose
-    public Float sTD;
+    public float sTD;
     @SerializedName("SVC")
     @Expose
-    public Float sVC;
+    public float sVC;
     @SerializedName("SYP")
     @Expose
-    public Float sYP;
+    public float sYP;
     @SerializedName("SZL")
     @Expose
-    public Float sZL;
+    public float sZL;
     @SerializedName("THB")
     @Expose
-    public Float tHB;
+    public float tHB;
     @SerializedName("TJS")
     @Expose
-    public Float tJS;
+    public float tJS;
     @SerializedName("TMT")
     @Expose
-    public Float tMT;
+    public float tMT;
     @SerializedName("TND")
     @Expose
-    public Float tND;
+    public float tND;
     @SerializedName("TOP")
     @Expose
-    public Float tOP;
+    public float tOP;
     @SerializedName("TRY")
     @Expose
-    public Float tRY;
+    public float tRY;
     @SerializedName("TTD")
     @Expose
-    public Float tTD;
+    public float tTD;
     @SerializedName("TWD")
     @Expose
-    public Float tWD;
+    public float tWD;
     @SerializedName("TZS")
     @Expose
-    public Float tZS;
+    public float tZS;
     @SerializedName("UAH")
     @Expose
-    public Float uAH;
+    public float uAH;
     @SerializedName("UGX")
     @Expose
-    public Float uGX;
+    public float uGX;
     @SerializedName("USD")
     @Expose
-    public Float uSD;
+    public float uSD;
     @SerializedName("UYU")
     @Expose
-    public Float uYU;
+    public float uYU;
     @SerializedName("UZS")
     @Expose
-    public Float uZS;
+    public float uZS;
     @SerializedName("VEF")
     @Expose
-    public Float vEF;
+    public float vEF;
     @SerializedName("VND")
     @Expose
-    public Float vND;
+    public float vND;
     @SerializedName("VUV")
     @Expose
-    public Float vUV;
+    public float vUV;
     @SerializedName("WST")
     @Expose
-    public Float wST;
+    public float wST;
     @SerializedName("XAF")
     @Expose
-    public Float xAF;
+    public float xAF;
     @SerializedName("XAG")
     @Expose
-    public Float xAG;
+    public float xAG;
     @SerializedName("XAU")
     @Expose
-    public Float xAU;
+    public float xAU;
     @SerializedName("XCD")
     @Expose
-    public Float xCD;
+    public float xCD;
     @SerializedName("XDR")
     @Expose
-    public Float xDR;
+    public float xDR;
     @SerializedName("XOF")
     @Expose
-    public Float xOF;
+    public float xOF;
     @SerializedName("XPF")
     @Expose
-    public Float xPF;
+    public float xPF;
     @SerializedName("YER")
     @Expose
-    public Float yER;
+    public float yER;
     @SerializedName("ZAR")
     @Expose
-    public Float zAR;
+    public float zAR;
     @SerializedName("ZMK")
     @Expose
-    public Float zMK;
+    public float zMK;
     @SerializedName("ZMW")
     @Expose
-    public Float zMW;
+    public float zMW;
     @SerializedName("ZWL")
     @Expose
-    public Float zWL;
+    public float zWL;
 
-    public Float getaED() {
-        return aED;
-    }
-
-    public void setaED(Float aED) {
+    public RatesResponseApi(float aED, float aFN, float aLL, float aMD, float aNG, float aOA, float aRS, float aUD, float aWG, float aZN, float bAM, float bBD, float bDT, float bGN, float bHD, float bIF, float bMD, float bND, float bOB, float bRL, float bSD, float bTC, float bTN, float bWP, float bYN, float bYR, float bZD, float cAD, float cDF, float cHF, float cLF, float cLP, float cNY, float cOP, float cRC, float cUC, float cUP, float cVE, float cZK, float dJF, float dKK, float dOP, float dZD, float eGP, float eRN, float eTB, int eUR, float fJD, float fKP, float gBP, float gEL, float gGP, float gHS, float gIP, float gMD, float gNF, float gTQ, float gYD, float hKD, float hNL, float hRK, float hTG, float hUF, float iDR, float iLS, float iMP, float iNR, float iQD, float iRR, float iSK, float jEP, float jMD, float jOD, float jPY, float kES, float kGS, float kHR, float kMF, float kPW, float kRW, float kWD, float kYD, float kZT, float lAK, float lBP, float lKR, float lRD, float lSL, float lTL, float lVL, float lYD, float mAD, float mDL, float mGA, float mKD, float mMK, float mNT, float mOP, float mRO, float mUR, float mVR, float mWK, float mXN, float mYR, float mZN, float nAD, float nGN, float nIO, float nOK, float nPR, float nZD, float oMR, float pAB, float pEN, float pGK, float pHP, float pKR, float pLN, float pYG, float qAR, float rON, float rSD, float rUB, float rWF, float sAR, float sBD, float sCR, float sDG, float sEK, float sGD, float sHP, float sLL, float sOS, float sRD, float sTD, float sVC, float sYP, float sZL, float tHB, float tJS, float tMT, float tND, float tOP, float tRY, float tTD, float tWD, float tZS, float uAH, float uGX, float uSD, float uYU, float uZS, float vEF, float vND, float vUV, float wST, float xAF, float xAG, float xAU, float xCD, float xDR, float xOF, float xPF, float yER, float zAR, float zMK, float zMW, float zWL) {
         this.aED = aED;
-    }
-
-    public Float getaFN() {
-        return aFN;
-    }
-
-    public void setaFN(Float aFN) {
         this.aFN = aFN;
-    }
-
-    public Float getaLL() {
-        return aLL;
-    }
-
-    public void setaLL(Float aLL) {
         this.aLL = aLL;
-    }
-
-    public Float getaMD() {
-        return aMD;
-    }
-
-    public void setaMD(Float aMD) {
         this.aMD = aMD;
-    }
-
-    public Float getaNG() {
-        return aNG;
-    }
-
-    public void setaNG(Float aNG) {
         this.aNG = aNG;
-    }
-
-    public Float getaOA() {
-        return aOA;
-    }
-
-    public void setaOA(Float aOA) {
         this.aOA = aOA;
-    }
-
-    public Float getaRS() {
-        return aRS;
-    }
-
-    public void setaRS(Float aRS) {
         this.aRS = aRS;
-    }
-
-    public Float getaUD() {
-        return aUD;
-    }
-
-    public void setaUD(Float aUD) {
         this.aUD = aUD;
-    }
-
-    public Float getaWG() {
-        return aWG;
-    }
-
-    public void setaWG(Float aWG) {
         this.aWG = aWG;
-    }
-
-    public Float getaZN() {
-        return aZN;
-    }
-
-    public void setaZN(Float aZN) {
         this.aZN = aZN;
-    }
-
-    public Float getbAM() {
-        return bAM;
-    }
-
-    public void setbAM(Float bAM) {
         this.bAM = bAM;
-    }
-
-    public Float getbBD() {
-        return bBD;
-    }
-
-    public void setbBD(Float bBD) {
         this.bBD = bBD;
-    }
-
-    public Float getbDT() {
-        return bDT;
-    }
-
-    public void setbDT(Float bDT) {
         this.bDT = bDT;
-    }
-
-    public Float getbGN() {
-        return bGN;
-    }
-
-    public void setbGN(Float bGN) {
         this.bGN = bGN;
-    }
-
-    public Float getbHD() {
-        return bHD;
-    }
-
-    public void setbHD(Float bHD) {
         this.bHD = bHD;
-    }
-
-    public Float getbIF() {
-        return bIF;
-    }
-
-    public void setbIF(Float bIF) {
         this.bIF = bIF;
-    }
-
-    public Float getbMD() {
-        return bMD;
-    }
-
-    public void setbMD(Float bMD) {
         this.bMD = bMD;
-    }
-
-    public Float getbND() {
-        return bND;
-    }
-
-    public void setbND(Float bND) {
         this.bND = bND;
-    }
-
-    public Float getbOB() {
-        return bOB;
-    }
-
-    public void setbOB(Float bOB) {
         this.bOB = bOB;
-    }
-
-    public Float getbRL() {
-        return bRL;
-    }
-
-    public void setbRL(Float bRL) {
         this.bRL = bRL;
-    }
-
-    public Float getbSD() {
-        return bSD;
-    }
-
-    public void setbSD(Float bSD) {
         this.bSD = bSD;
-    }
-
-    public Float getbTC() {
-        return bTC;
-    }
-
-    public void setbTC(Float bTC) {
         this.bTC = bTC;
-    }
-
-    public Float getbTN() {
-        return bTN;
-    }
-
-    public void setbTN(Float bTN) {
         this.bTN = bTN;
-    }
-
-    public Float getbWP() {
-        return bWP;
-    }
-
-    public void setbWP(Float bWP) {
         this.bWP = bWP;
-    }
-
-    public Float getbYN() {
-        return bYN;
-    }
-
-    public void setbYN(Float bYN) {
         this.bYN = bYN;
-    }
-
-    public Float getbYR() {
-        return bYR;
-    }
-
-    public void setbYR(Float bYR) {
         this.bYR = bYR;
-    }
-
-    public Float getbZD() {
-        return bZD;
-    }
-
-    public void setbZD(Float bZD) {
         this.bZD = bZD;
-    }
-
-    public Float getcAD() {
-        return cAD;
-    }
-
-    public void setcAD(Float cAD) {
         this.cAD = cAD;
-    }
-
-    public Float getcDF() {
-        return cDF;
-    }
-
-    public void setcDF(Float cDF) {
         this.cDF = cDF;
-    }
-
-    public Float getcHF() {
-        return cHF;
-    }
-
-    public void setcHF(Float cHF) {
         this.cHF = cHF;
-    }
-
-    public Float getcLF() {
-        return cLF;
-    }
-
-    public void setcLF(Float cLF) {
         this.cLF = cLF;
-    }
-
-    public Float getcLP() {
-        return cLP;
-    }
-
-    public void setcLP(Float cLP) {
         this.cLP = cLP;
-    }
-
-    public Float getcNY() {
-        return cNY;
-    }
-
-    public void setcNY(Float cNY) {
         this.cNY = cNY;
-    }
-
-    public Float getcOP() {
-        return cOP;
-    }
-
-    public void setcOP(Float cOP) {
         this.cOP = cOP;
-    }
-
-    public Float getcRC() {
-        return cRC;
-    }
-
-    public void setcRC(Float cRC) {
         this.cRC = cRC;
-    }
-
-    public Float getcUC() {
-        return cUC;
-    }
-
-    public void setcUC(Float cUC) {
         this.cUC = cUC;
-    }
-
-    public Float getcUP() {
-        return cUP;
-    }
-
-    public void setcUP(Float cUP) {
         this.cUP = cUP;
-    }
-
-    public Float getcVE() {
-        return cVE;
-    }
-
-    public void setcVE(Float cVE) {
         this.cVE = cVE;
-    }
-
-    public Float getcZK() {
-        return cZK;
-    }
-
-    public void setcZK(Float cZK) {
         this.cZK = cZK;
-    }
-
-    public Float getdJF() {
-        return dJF;
-    }
-
-    public void setdJF(Float dJF) {
         this.dJF = dJF;
-    }
-
-    public Float getdKK() {
-        return dKK;
-    }
-
-    public void setdKK(Float dKK) {
         this.dKK = dKK;
-    }
-
-    public Float getdOP() {
-        return dOP;
-    }
-
-    public void setdOP(Float dOP) {
         this.dOP = dOP;
-    }
-
-    public Float getdZD() {
-        return dZD;
-    }
-
-    public void setdZD(Float dZD) {
         this.dZD = dZD;
-    }
-
-    public Float geteGP() {
-        return eGP;
-    }
-
-    public void seteGP(Float eGP) {
         this.eGP = eGP;
-    }
-
-    public Float geteRN() {
-        return eRN;
-    }
-
-    public void seteRN(Float eRN) {
         this.eRN = eRN;
-    }
-
-    public Float geteTB() {
-        return eTB;
-    }
-
-    public void seteTB(Float eTB) {
         this.eTB = eTB;
-    }
-
-    public Integer geteUR() {
-        return eUR;
-    }
-
-    public void seteUR(Integer eUR) {
         this.eUR = eUR;
-    }
-
-    public Float getfJD() {
-        return fJD;
-    }
-
-    public void setfJD(Float fJD) {
         this.fJD = fJD;
-    }
-
-    public Float getfKP() {
-        return fKP;
-    }
-
-    public void setfKP(Float fKP) {
         this.fKP = fKP;
-    }
-
-    public Float getgBP() {
-        return gBP;
-    }
-
-    public void setgBP(Float gBP) {
         this.gBP = gBP;
-    }
-
-    public Float getgEL() {
-        return gEL;
-    }
-
-    public void setgEL(Float gEL) {
         this.gEL = gEL;
-    }
-
-    public Float getgGP() {
-        return gGP;
-    }
-
-    public void setgGP(Float gGP) {
         this.gGP = gGP;
-    }
-
-    public Float getgHS() {
-        return gHS;
-    }
-
-    public void setgHS(Float gHS) {
         this.gHS = gHS;
-    }
-
-    public Float getgIP() {
-        return gIP;
-    }
-
-    public void setgIP(Float gIP) {
         this.gIP = gIP;
-    }
-
-    public Float getgMD() {
-        return gMD;
-    }
-
-    public void setgMD(Float gMD) {
         this.gMD = gMD;
-    }
-
-    public Float getgNF() {
-        return gNF;
-    }
-
-    public void setgNF(Float gNF) {
         this.gNF = gNF;
-    }
-
-    public Float getgTQ() {
-        return gTQ;
-    }
-
-    public void setgTQ(Float gTQ) {
         this.gTQ = gTQ;
-    }
-
-    public Float getgYD() {
-        return gYD;
-    }
-
-    public void setgYD(Float gYD) {
         this.gYD = gYD;
-    }
-
-    public Float gethKD() {
-        return hKD;
-    }
-
-    public void sethKD(Float hKD) {
         this.hKD = hKD;
-    }
-
-    public Float gethNL() {
-        return hNL;
-    }
-
-    public void sethNL(Float hNL) {
         this.hNL = hNL;
-    }
-
-    public Float gethRK() {
-        return hRK;
-    }
-
-    public void sethRK(Float hRK) {
         this.hRK = hRK;
-    }
-
-    public Float gethTG() {
-        return hTG;
-    }
-
-    public void sethTG(Float hTG) {
         this.hTG = hTG;
-    }
-
-    public Float gethUF() {
-        return hUF;
-    }
-
-    public void sethUF(Float hUF) {
         this.hUF = hUF;
-    }
-
-    public Float getiDR() {
-        return iDR;
-    }
-
-    public void setiDR(Float iDR) {
         this.iDR = iDR;
-    }
-
-    public Float getiLS() {
-        return iLS;
-    }
-
-    public void setiLS(Float iLS) {
         this.iLS = iLS;
-    }
-
-    public Float getiMP() {
-        return iMP;
-    }
-
-    public void setiMP(Float iMP) {
         this.iMP = iMP;
-    }
-
-    public Float getiNR() {
-        return iNR;
-    }
-
-    public void setiNR(Float iNR) {
         this.iNR = iNR;
-    }
-
-    public Float getiQD() {
-        return iQD;
-    }
-
-    public void setiQD(Float iQD) {
         this.iQD = iQD;
-    }
-
-    public Float getiRR() {
-        return iRR;
-    }
-
-    public void setiRR(Float iRR) {
         this.iRR = iRR;
-    }
-
-    public Float getiSK() {
-        return iSK;
-    }
-
-    public void setiSK(Float iSK) {
         this.iSK = iSK;
-    }
-
-    public Float getjEP() {
-        return jEP;
-    }
-
-    public void setjEP(Float jEP) {
         this.jEP = jEP;
-    }
-
-    public Float getjMD() {
-        return jMD;
-    }
-
-    public void setjMD(Float jMD) {
         this.jMD = jMD;
-    }
-
-    public Float getjOD() {
-        return jOD;
-    }
-
-    public void setjOD(Float jOD) {
         this.jOD = jOD;
-    }
-
-    public Float getjPY() {
-        return jPY;
-    }
-
-    public void setjPY(Float jPY) {
         this.jPY = jPY;
-    }
-
-    public Float getkES() {
-        return kES;
-    }
-
-    public void setkES(Float kES) {
         this.kES = kES;
-    }
-
-    public Float getkGS() {
-        return kGS;
-    }
-
-    public void setkGS(Float kGS) {
         this.kGS = kGS;
-    }
-
-    public Float getkHR() {
-        return kHR;
-    }
-
-    public void setkHR(Float kHR) {
         this.kHR = kHR;
-    }
-
-    public Float getkMF() {
-        return kMF;
-    }
-
-    public void setkMF(Float kMF) {
         this.kMF = kMF;
-    }
-
-    public Float getkPW() {
-        return kPW;
-    }
-
-    public void setkPW(Float kPW) {
         this.kPW = kPW;
-    }
-
-    public Float getkRW() {
-        return kRW;
-    }
-
-    public void setkRW(Float kRW) {
         this.kRW = kRW;
-    }
-
-    public Float getkWD() {
-        return kWD;
-    }
-
-    public void setkWD(Float kWD) {
         this.kWD = kWD;
-    }
-
-    public Float getkYD() {
-        return kYD;
-    }
-
-    public void setkYD(Float kYD) {
         this.kYD = kYD;
-    }
-
-    public Float getkZT() {
-        return kZT;
-    }
-
-    public void setkZT(Float kZT) {
         this.kZT = kZT;
-    }
-
-    public Float getlAK() {
-        return lAK;
-    }
-
-    public void setlAK(Float lAK) {
         this.lAK = lAK;
-    }
-
-    public Float getlBP() {
-        return lBP;
-    }
-
-    public void setlBP(Float lBP) {
         this.lBP = lBP;
-    }
-
-    public Float getlKR() {
-        return lKR;
-    }
-
-    public void setlKR(Float lKR) {
         this.lKR = lKR;
-    }
-
-    public Float getlRD() {
-        return lRD;
-    }
-
-    public void setlRD(Float lRD) {
         this.lRD = lRD;
-    }
-
-    public Float getlSL() {
-        return lSL;
-    }
-
-    public void setlSL(Float lSL) {
         this.lSL = lSL;
-    }
-
-    public Float getlTL() {
-        return lTL;
-    }
-
-    public void setlTL(Float lTL) {
         this.lTL = lTL;
-    }
-
-    public Float getlVL() {
-        return lVL;
-    }
-
-    public void setlVL(Float lVL) {
         this.lVL = lVL;
-    }
-
-    public Float getlYD() {
-        return lYD;
-    }
-
-    public void setlYD(Float lYD) {
         this.lYD = lYD;
-    }
-
-    public Float getmAD() {
-        return mAD;
-    }
-
-    public void setmAD(Float mAD) {
         this.mAD = mAD;
-    }
-
-    public Float getmDL() {
-        return mDL;
-    }
-
-    public void setmDL(Float mDL) {
         this.mDL = mDL;
-    }
-
-    public Float getmGA() {
-        return mGA;
-    }
-
-    public void setmGA(Float mGA) {
         this.mGA = mGA;
-    }
-
-    public Float getmKD() {
-        return mKD;
-    }
-
-    public void setmKD(Float mKD) {
         this.mKD = mKD;
-    }
-
-    public Float getmMK() {
-        return mMK;
-    }
-
-    public void setmMK(Float mMK) {
         this.mMK = mMK;
-    }
-
-    public Float getmNT() {
-        return mNT;
-    }
-
-    public void setmNT(Float mNT) {
         this.mNT = mNT;
-    }
-
-    public Float getmOP() {
-        return mOP;
-    }
-
-    public void setmOP(Float mOP) {
         this.mOP = mOP;
-    }
-
-    public Float getmRO() {
-        return mRO;
-    }
-
-    public void setmRO(Float mRO) {
         this.mRO = mRO;
-    }
-
-    public Float getmUR() {
-        return mUR;
-    }
-
-    public void setmUR(Float mUR) {
         this.mUR = mUR;
-    }
-
-    public Float getmVR() {
-        return mVR;
-    }
-
-    public void setmVR(Float mVR) {
         this.mVR = mVR;
-    }
-
-    public Float getmWK() {
-        return mWK;
-    }
-
-    public void setmWK(Float mWK) {
         this.mWK = mWK;
-    }
-
-    public Float getmXN() {
-        return mXN;
-    }
-
-    public void setmXN(Float mXN) {
         this.mXN = mXN;
-    }
-
-    public Float getmYR() {
-        return mYR;
-    }
-
-    public void setmYR(Float mYR) {
         this.mYR = mYR;
-    }
-
-    public Float getmZN() {
-        return mZN;
-    }
-
-    public void setmZN(Float mZN) {
         this.mZN = mZN;
-    }
-
-    public Float getnAD() {
-        return nAD;
-    }
-
-    public void setnAD(Float nAD) {
         this.nAD = nAD;
-    }
-
-    public Float getnGN() {
-        return nGN;
-    }
-
-    public void setnGN(Float nGN) {
         this.nGN = nGN;
-    }
-
-    public Float getnIO() {
-        return nIO;
-    }
-
-    public void setnIO(Float nIO) {
         this.nIO = nIO;
-    }
-
-    public Float getnOK() {
-        return nOK;
-    }
-
-    public void setnOK(Float nOK) {
         this.nOK = nOK;
-    }
-
-    public Float getnPR() {
-        return nPR;
-    }
-
-    public void setnPR(Float nPR) {
         this.nPR = nPR;
-    }
-
-    public Float getnZD() {
-        return nZD;
-    }
-
-    public void setnZD(Float nZD) {
         this.nZD = nZD;
-    }
-
-    public Float getoMR() {
-        return oMR;
-    }
-
-    public void setoMR(Float oMR) {
         this.oMR = oMR;
-    }
-
-    public Float getpAB() {
-        return pAB;
-    }
-
-    public void setpAB(Float pAB) {
         this.pAB = pAB;
-    }
-
-    public Float getpEN() {
-        return pEN;
-    }
-
-    public void setpEN(Float pEN) {
         this.pEN = pEN;
-    }
-
-    public Float getpGK() {
-        return pGK;
-    }
-
-    public void setpGK(Float pGK) {
         this.pGK = pGK;
-    }
-
-    public Float getpHP() {
-        return pHP;
-    }
-
-    public void setpHP(Float pHP) {
         this.pHP = pHP;
-    }
-
-    public Float getpKR() {
-        return pKR;
-    }
-
-    public void setpKR(Float pKR) {
         this.pKR = pKR;
-    }
-
-    public Float getpLN() {
-        return pLN;
-    }
-
-    public void setpLN(Float pLN) {
         this.pLN = pLN;
-    }
-
-    public Float getpYG() {
-        return pYG;
-    }
-
-    public void setpYG(Float pYG) {
         this.pYG = pYG;
-    }
-
-    public Float getqAR() {
-        return qAR;
-    }
-
-    public void setqAR(Float qAR) {
         this.qAR = qAR;
-    }
-
-    public Float getrON() {
-        return rON;
-    }
-
-    public void setrON(Float rON) {
         this.rON = rON;
-    }
-
-    public Float getrSD() {
-        return rSD;
-    }
-
-    public void setrSD(Float rSD) {
         this.rSD = rSD;
-    }
-
-    public Float getrUB() {
-        return rUB;
-    }
-
-    public void setrUB(Float rUB) {
         this.rUB = rUB;
-    }
-
-    public Float getrWF() {
-        return rWF;
-    }
-
-    public void setrWF(Float rWF) {
         this.rWF = rWF;
-    }
-
-    public Float getsAR() {
-        return sAR;
-    }
-
-    public void setsAR(Float sAR) {
         this.sAR = sAR;
-    }
-
-    public Float getsBD() {
-        return sBD;
-    }
-
-    public void setsBD(Float sBD) {
         this.sBD = sBD;
-    }
-
-    public Float getsCR() {
-        return sCR;
-    }
-
-    public void setsCR(Float sCR) {
         this.sCR = sCR;
-    }
-
-    public Float getsDG() {
-        return sDG;
-    }
-
-    public void setsDG(Float sDG) {
         this.sDG = sDG;
-    }
-
-    public Float getsEK() {
-        return sEK;
-    }
-
-    public void setsEK(Float sEK) {
         this.sEK = sEK;
-    }
-
-    public Float getsGD() {
-        return sGD;
-    }
-
-    public void setsGD(Float sGD) {
         this.sGD = sGD;
-    }
-
-    public Float getsHP() {
-        return sHP;
-    }
-
-    public void setsHP(Float sHP) {
         this.sHP = sHP;
-    }
-
-    public Float getsLL() {
-        return sLL;
-    }
-
-    public void setsLL(Float sLL) {
         this.sLL = sLL;
-    }
-
-    public Float getsOS() {
-        return sOS;
-    }
-
-    public void setsOS(Float sOS) {
         this.sOS = sOS;
-    }
-
-    public Float getsRD() {
-        return sRD;
-    }
-
-    public void setsRD(Float sRD) {
         this.sRD = sRD;
-    }
-
-    public Float getsTD() {
-        return sTD;
-    }
-
-    public void setsTD(Float sTD) {
         this.sTD = sTD;
-    }
-
-    public Float getsVC() {
-        return sVC;
-    }
-
-    public void setsVC(Float sVC) {
         this.sVC = sVC;
-    }
-
-    public Float getsYP() {
-        return sYP;
-    }
-
-    public void setsYP(Float sYP) {
         this.sYP = sYP;
-    }
-
-    public Float getsZL() {
-        return sZL;
-    }
-
-    public void setsZL(Float sZL) {
         this.sZL = sZL;
-    }
-
-    public Float gettHB() {
-        return tHB;
-    }
-
-    public void settHB(Float tHB) {
         this.tHB = tHB;
-    }
-
-    public Float gettJS() {
-        return tJS;
-    }
-
-    public void settJS(Float tJS) {
         this.tJS = tJS;
-    }
-
-    public Float gettMT() {
-        return tMT;
-    }
-
-    public void settMT(Float tMT) {
         this.tMT = tMT;
-    }
-
-    public Float gettND() {
-        return tND;
-    }
-
-    public void settND(Float tND) {
         this.tND = tND;
-    }
-
-    public Float gettOP() {
-        return tOP;
-    }
-
-    public void settOP(Float tOP) {
         this.tOP = tOP;
-    }
-
-    public Float gettRY() {
-        return tRY;
-    }
-
-    public void settRY(Float tRY) {
         this.tRY = tRY;
-    }
-
-    public Float gettTD() {
-        return tTD;
-    }
-
-    public void settTD(Float tTD) {
         this.tTD = tTD;
-    }
-
-    public Float gettWD() {
-        return tWD;
-    }
-
-    public void settWD(Float tWD) {
         this.tWD = tWD;
-    }
-
-    public Float gettZS() {
-        return tZS;
-    }
-
-    public void settZS(Float tZS) {
         this.tZS = tZS;
-    }
-
-    public Float getuAH() {
-        return uAH;
-    }
-
-    public void setuAH(Float uAH) {
         this.uAH = uAH;
-    }
-
-    public Float getuGX() {
-        return uGX;
-    }
-
-    public void setuGX(Float uGX) {
         this.uGX = uGX;
-    }
-
-    public Float getuSD() {
-        return uSD;
-    }
-
-    public void setuSD(Float uSD) {
         this.uSD = uSD;
-    }
-
-    public Float getuYU() {
-        return uYU;
-    }
-
-    public void setuYU(Float uYU) {
         this.uYU = uYU;
-    }
-
-    public Float getuZS() {
-        return uZS;
-    }
-
-    public void setuZS(Float uZS) {
         this.uZS = uZS;
-    }
-
-    public Float getvEF() {
-        return vEF;
-    }
-
-    public void setvEF(Float vEF) {
         this.vEF = vEF;
-    }
-
-    public Float getvND() {
-        return vND;
-    }
-
-    public void setvND(Float vND) {
         this.vND = vND;
-    }
-
-    public Float getvUV() {
-        return vUV;
-    }
-
-    public void setvUV(Float vUV) {
         this.vUV = vUV;
-    }
-
-    public Float getwST() {
-        return wST;
-    }
-
-    public void setwST(Float wST) {
         this.wST = wST;
-    }
-
-    public Float getxAF() {
-        return xAF;
-    }
-
-    public void setxAF(Float xAF) {
         this.xAF = xAF;
-    }
-
-    public Float getxAG() {
-        return xAG;
-    }
-
-    public void setxAG(Float xAG) {
         this.xAG = xAG;
-    }
-
-    public Float getxAU() {
-        return xAU;
-    }
-
-    public void setxAU(Float xAU) {
         this.xAU = xAU;
-    }
-
-    public Float getxCD() {
-        return xCD;
-    }
-
-    public void setxCD(Float xCD) {
         this.xCD = xCD;
-    }
-
-    public Float getxDR() {
-        return xDR;
-    }
-
-    public void setxDR(Float xDR) {
         this.xDR = xDR;
-    }
-
-    public Float getxOF() {
-        return xOF;
-    }
-
-    public void setxOF(Float xOF) {
         this.xOF = xOF;
-    }
-
-    public Float getxPF() {
-        return xPF;
-    }
-
-    public void setxPF(Float xPF) {
         this.xPF = xPF;
-    }
-
-    public Float getyER() {
-        return yER;
-    }
-
-    public void setyER(Float yER) {
         this.yER = yER;
-    }
-
-    public Float getzAR() {
-        return zAR;
-    }
-
-    public void setzAR(Float zAR) {
         this.zAR = zAR;
-    }
-
-    public Float getzMK() {
-        return zMK;
-    }
-
-    public void setzMK(Float zMK) {
         this.zMK = zMK;
-    }
-
-    public Float getzMW() {
-        return zMW;
-    }
-
-    public void setzMW(Float zMW) {
         this.zMW = zMW;
-    }
-
-    public Float getzWL() {
-        return zWL;
-    }
-
-    public void setzWL(Float zWL) {
         this.zWL = zWL;
     }
 
+    public float getaED() {
+        return aED;
+    }
 
+    public void setaED(float aED) {
+        this.aED = aED;
+    }
+
+    public float getaFN() {
+        return aFN;
+    }
+
+    public void setaFN(float aFN) {
+        this.aFN = aFN;
+    }
+
+    public float getaLL() {
+        return aLL;
+    }
+
+    public void setaLL(float aLL) {
+        this.aLL = aLL;
+    }
+
+    public float getaMD() {
+        return aMD;
+    }
+
+    public void setaMD(float aMD) {
+        this.aMD = aMD;
+    }
+
+    public float getaNG() {
+        return aNG;
+    }
+
+    public void setaNG(float aNG) {
+        this.aNG = aNG;
+    }
+
+    public float getaOA() {
+        return aOA;
+    }
+
+    public void setaOA(float aOA) {
+        this.aOA = aOA;
+    }
+
+    public float getaRS() {
+        return aRS;
+    }
+
+    public void setaRS(float aRS) {
+        this.aRS = aRS;
+    }
+
+    public float getaUD() {
+        return aUD;
+    }
+
+    public void setaUD(float aUD) {
+        this.aUD = aUD;
+    }
+
+    public float getaWG() {
+        return aWG;
+    }
+
+    public void setaWG(float aWG) {
+        this.aWG = aWG;
+    }
+
+    public float getaZN() {
+        return aZN;
+    }
+
+    public void setaZN(float aZN) {
+        this.aZN = aZN;
+    }
+
+    public float getbAM() {
+        return bAM;
+    }
+
+    public void setbAM(float bAM) {
+        this.bAM = bAM;
+    }
+
+    public float getbBD() {
+        return bBD;
+    }
+
+    public void setbBD(float bBD) {
+        this.bBD = bBD;
+    }
+
+    public float getbDT() {
+        return bDT;
+    }
+
+    public void setbDT(float bDT) {
+        this.bDT = bDT;
+    }
+
+    public float getbGN() {
+        return bGN;
+    }
+
+    public void setbGN(float bGN) {
+        this.bGN = bGN;
+    }
+
+    public float getbHD() {
+        return bHD;
+    }
+
+    public void setbHD(float bHD) {
+        this.bHD = bHD;
+    }
+
+    public float getbIF() {
+        return bIF;
+    }
+
+    public void setbIF(float bIF) {
+        this.bIF = bIF;
+    }
+
+    public float getbMD() {
+        return bMD;
+    }
+
+    public void setbMD(float bMD) {
+        this.bMD = bMD;
+    }
+
+    public float getbND() {
+        return bND;
+    }
+
+    public void setbND(float bND) {
+        this.bND = bND;
+    }
+
+    public float getbOB() {
+        return bOB;
+    }
+
+    public void setbOB(float bOB) {
+        this.bOB = bOB;
+    }
+
+    public float getbRL() {
+        return bRL;
+    }
+
+    public void setbRL(float bRL) {
+        this.bRL = bRL;
+    }
+
+    public float getbSD() {
+        return bSD;
+    }
+
+    public void setbSD(float bSD) {
+        this.bSD = bSD;
+    }
+
+    public float getbTC() {
+        return bTC;
+    }
+
+    public void setbTC(float bTC) {
+        this.bTC = bTC;
+    }
+
+    public float getbTN() {
+        return bTN;
+    }
+
+    public void setbTN(float bTN) {
+        this.bTN = bTN;
+    }
+
+    public float getbWP() {
+        return bWP;
+    }
+
+    public void setbWP(float bWP) {
+        this.bWP = bWP;
+    }
+
+    public float getbYN() {
+        return bYN;
+    }
+
+    public void setbYN(float bYN) {
+        this.bYN = bYN;
+    }
+
+    public float getbYR() {
+        return bYR;
+    }
+
+    public void setbYR(float bYR) {
+        this.bYR = bYR;
+    }
+
+    public float getbZD() {
+        return bZD;
+    }
+
+    public void setbZD(float bZD) {
+        this.bZD = bZD;
+    }
+
+    public float getcAD() {
+        return cAD;
+    }
+
+    public void setcAD(float cAD) {
+        this.cAD = cAD;
+    }
+
+    public float getcDF() {
+        return cDF;
+    }
+
+    public void setcDF(float cDF) {
+        this.cDF = cDF;
+    }
+
+    public float getcHF() {
+        return cHF;
+    }
+
+    public void setcHF(float cHF) {
+        this.cHF = cHF;
+    }
+
+    public float getcLF() {
+        return cLF;
+    }
+
+    public void setcLF(float cLF) {
+        this.cLF = cLF;
+    }
+
+    public float getcLP() {
+        return cLP;
+    }
+
+    public void setcLP(float cLP) {
+        this.cLP = cLP;
+    }
+
+    public float getcNY() {
+        return cNY;
+    }
+
+    public void setcNY(float cNY) {
+        this.cNY = cNY;
+    }
+
+    public float getcOP() {
+        return cOP;
+    }
+
+    public void setcOP(float cOP) {
+        this.cOP = cOP;
+    }
+
+    public float getcRC() {
+        return cRC;
+    }
+
+    public void setcRC(float cRC) {
+        this.cRC = cRC;
+    }
+
+    public float getcUC() {
+        return cUC;
+    }
+
+    public void setcUC(float cUC) {
+        this.cUC = cUC;
+    }
+
+    public float getcUP() {
+        return cUP;
+    }
+
+    public void setcUP(float cUP) {
+        this.cUP = cUP;
+    }
+
+    public float getcVE() {
+        return cVE;
+    }
+
+    public void setcVE(float cVE) {
+        this.cVE = cVE;
+    }
+
+    public float getcZK() {
+        return cZK;
+    }
+
+    public void setcZK(float cZK) {
+        this.cZK = cZK;
+    }
+
+    public float getdJF() {
+        return dJF;
+    }
+
+    public void setdJF(float dJF) {
+        this.dJF = dJF;
+    }
+
+    public float getdKK() {
+        return dKK;
+    }
+
+    public void setdKK(float dKK) {
+        this.dKK = dKK;
+    }
+
+    public float getdOP() {
+        return dOP;
+    }
+
+    public void setdOP(float dOP) {
+        this.dOP = dOP;
+    }
+
+    public float getdZD() {
+        return dZD;
+    }
+
+    public void setdZD(float dZD) {
+        this.dZD = dZD;
+    }
+
+    public float geteGP() {
+        return eGP;
+    }
+
+    public void seteGP(float eGP) {
+        this.eGP = eGP;
+    }
+
+    public float geteRN() {
+        return eRN;
+    }
+
+    public void seteRN(float eRN) {
+        this.eRN = eRN;
+    }
+
+    public float geteTB() {
+        return eTB;
+    }
+
+    public void seteTB(float eTB) {
+        this.eTB = eTB;
+    }
+
+    public int geteUR() {
+        return eUR;
+    }
+
+    public void seteUR(int eUR) {
+        this.eUR = eUR;
+    }
+
+    public float getfJD() {
+        return fJD;
+    }
+
+    public void setfJD(float fJD) {
+        this.fJD = fJD;
+    }
+
+    public float getfKP() {
+        return fKP;
+    }
+
+    public void setfKP(float fKP) {
+        this.fKP = fKP;
+    }
+
+    public float getgBP() {
+        return gBP;
+    }
+
+    public void setgBP(float gBP) {
+        this.gBP = gBP;
+    }
+
+    public float getgEL() {
+        return gEL;
+    }
+
+    public void setgEL(float gEL) {
+        this.gEL = gEL;
+    }
+
+    public float getgGP() {
+        return gGP;
+    }
+
+    public void setgGP(float gGP) {
+        this.gGP = gGP;
+    }
+
+    public float getgHS() {
+        return gHS;
+    }
+
+    public void setgHS(float gHS) {
+        this.gHS = gHS;
+    }
+
+    public float getgIP() {
+        return gIP;
+    }
+
+    public void setgIP(float gIP) {
+        this.gIP = gIP;
+    }
+
+    public float getgMD() {
+        return gMD;
+    }
+
+    public void setgMD(float gMD) {
+        this.gMD = gMD;
+    }
+
+    public float getgNF() {
+        return gNF;
+    }
+
+    public void setgNF(float gNF) {
+        this.gNF = gNF;
+    }
+
+    public float getgTQ() {
+        return gTQ;
+    }
+
+    public void setgTQ(float gTQ) {
+        this.gTQ = gTQ;
+    }
+
+    public float getgYD() {
+        return gYD;
+    }
+
+    public void setgYD(float gYD) {
+        this.gYD = gYD;
+    }
+
+    public float gethKD() {
+        return hKD;
+    }
+
+    public void sethKD(float hKD) {
+        this.hKD = hKD;
+    }
+
+    public float gethNL() {
+        return hNL;
+    }
+
+    public void sethNL(float hNL) {
+        this.hNL = hNL;
+    }
+
+    public float gethRK() {
+        return hRK;
+    }
+
+    public void sethRK(float hRK) {
+        this.hRK = hRK;
+    }
+
+    public float gethTG() {
+        return hTG;
+    }
+
+    public void sethTG(float hTG) {
+        this.hTG = hTG;
+    }
+
+    public float gethUF() {
+        return hUF;
+    }
+
+    public void sethUF(float hUF) {
+        this.hUF = hUF;
+    }
+
+    public float getiDR() {
+        return iDR;
+    }
+
+    public void setiDR(float iDR) {
+        this.iDR = iDR;
+    }
+
+    public float getiLS() {
+        return iLS;
+    }
+
+    public void setiLS(float iLS) {
+        this.iLS = iLS;
+    }
+
+    public float getiMP() {
+        return iMP;
+    }
+
+    public void setiMP(float iMP) {
+        this.iMP = iMP;
+    }
+
+    public float getiNR() {
+        return iNR;
+    }
+
+    public void setiNR(float iNR) {
+        this.iNR = iNR;
+    }
+
+    public float getiQD() {
+        return iQD;
+    }
+
+    public void setiQD(float iQD) {
+        this.iQD = iQD;
+    }
+
+    public float getiRR() {
+        return iRR;
+    }
+
+    public void setiRR(float iRR) {
+        this.iRR = iRR;
+    }
+
+    public float getiSK() {
+        return iSK;
+    }
+
+    public void setiSK(float iSK) {
+        this.iSK = iSK;
+    }
+
+    public float getjEP() {
+        return jEP;
+    }
+
+    public void setjEP(float jEP) {
+        this.jEP = jEP;
+    }
+
+    public float getjMD() {
+        return jMD;
+    }
+
+    public void setjMD(float jMD) {
+        this.jMD = jMD;
+    }
+
+    public float getjOD() {
+        return jOD;
+    }
+
+    public void setjOD(float jOD) {
+        this.jOD = jOD;
+    }
+
+    public float getjPY() {
+        return jPY;
+    }
+
+    public void setjPY(float jPY) {
+        this.jPY = jPY;
+    }
+
+    public float getkES() {
+        return kES;
+    }
+
+    public void setkES(float kES) {
+        this.kES = kES;
+    }
+
+    public float getkGS() {
+        return kGS;
+    }
+
+    public void setkGS(float kGS) {
+        this.kGS = kGS;
+    }
+
+    public float getkHR() {
+        return kHR;
+    }
+
+    public void setkHR(float kHR) {
+        this.kHR = kHR;
+    }
+
+    public float getkMF() {
+        return kMF;
+    }
+
+    public void setkMF(float kMF) {
+        this.kMF = kMF;
+    }
+
+    public float getkPW() {
+        return kPW;
+    }
+
+    public void setkPW(float kPW) {
+        this.kPW = kPW;
+    }
+
+    public float getkRW() {
+        return kRW;
+    }
+
+    public void setkRW(float kRW) {
+        this.kRW = kRW;
+    }
+
+    public float getkWD() {
+        return kWD;
+    }
+
+    public void setkWD(float kWD) {
+        this.kWD = kWD;
+    }
+
+    public float getkYD() {
+        return kYD;
+    }
+
+    public void setkYD(float kYD) {
+        this.kYD = kYD;
+    }
+
+    public float getkZT() {
+        return kZT;
+    }
+
+    public void setkZT(float kZT) {
+        this.kZT = kZT;
+    }
+
+    public float getlAK() {
+        return lAK;
+    }
+
+    public void setlAK(float lAK) {
+        this.lAK = lAK;
+    }
+
+    public float getlBP() {
+        return lBP;
+    }
+
+    public void setlBP(float lBP) {
+        this.lBP = lBP;
+    }
+
+    public float getlKR() {
+        return lKR;
+    }
+
+    public void setlKR(float lKR) {
+        this.lKR = lKR;
+    }
+
+    public float getlRD() {
+        return lRD;
+    }
+
+    public void setlRD(float lRD) {
+        this.lRD = lRD;
+    }
+
+    public float getlSL() {
+        return lSL;
+    }
+
+    public void setlSL(float lSL) {
+        this.lSL = lSL;
+    }
+
+    public float getlTL() {
+        return lTL;
+    }
+
+    public void setlTL(float lTL) {
+        this.lTL = lTL;
+    }
+
+    public float getlVL() {
+        return lVL;
+    }
+
+    public void setlVL(float lVL) {
+        this.lVL = lVL;
+    }
+
+    public float getlYD() {
+        return lYD;
+    }
+
+    public void setlYD(float lYD) {
+        this.lYD = lYD;
+    }
+
+    public float getmAD() {
+        return mAD;
+    }
+
+    public void setmAD(float mAD) {
+        this.mAD = mAD;
+    }
+
+    public float getmDL() {
+        return mDL;
+    }
+
+    public void setmDL(float mDL) {
+        this.mDL = mDL;
+    }
+
+    public float getmGA() {
+        return mGA;
+    }
+
+    public void setmGA(float mGA) {
+        this.mGA = mGA;
+    }
+
+    public float getmKD() {
+        return mKD;
+    }
+
+    public void setmKD(float mKD) {
+        this.mKD = mKD;
+    }
+
+    public float getmMK() {
+        return mMK;
+    }
+
+    public void setmMK(float mMK) {
+        this.mMK = mMK;
+    }
+
+    public float getmNT() {
+        return mNT;
+    }
+
+    public void setmNT(float mNT) {
+        this.mNT = mNT;
+    }
+
+    public float getmOP() {
+        return mOP;
+    }
+
+    public void setmOP(float mOP) {
+        this.mOP = mOP;
+    }
+
+    public float getmRO() {
+        return mRO;
+    }
+
+    public void setmRO(float mRO) {
+        this.mRO = mRO;
+    }
+
+    public float getmUR() {
+        return mUR;
+    }
+
+    public void setmUR(float mUR) {
+        this.mUR = mUR;
+    }
+
+    public float getmVR() {
+        return mVR;
+    }
+
+    public void setmVR(float mVR) {
+        this.mVR = mVR;
+    }
+
+    public float getmWK() {
+        return mWK;
+    }
+
+    public void setmWK(float mWK) {
+        this.mWK = mWK;
+    }
+
+    public float getmXN() {
+        return mXN;
+    }
+
+    public void setmXN(float mXN) {
+        this.mXN = mXN;
+    }
+
+    public float getmYR() {
+        return mYR;
+    }
+
+    public void setmYR(float mYR) {
+        this.mYR = mYR;
+    }
+
+    public float getmZN() {
+        return mZN;
+    }
+
+    public void setmZN(float mZN) {
+        this.mZN = mZN;
+    }
+
+    public float getnAD() {
+        return nAD;
+    }
+
+    public void setnAD(float nAD) {
+        this.nAD = nAD;
+    }
+
+    public float getnGN() {
+        return nGN;
+    }
+
+    public void setnGN(float nGN) {
+        this.nGN = nGN;
+    }
+
+    public float getnIO() {
+        return nIO;
+    }
+
+    public void setnIO(float nIO) {
+        this.nIO = nIO;
+    }
+
+    public float getnOK() {
+        return nOK;
+    }
+
+    public void setnOK(float nOK) {
+        this.nOK = nOK;
+    }
+
+    public float getnPR() {
+        return nPR;
+    }
+
+    public void setnPR(float nPR) {
+        this.nPR = nPR;
+    }
+
+    public float getnZD() {
+        return nZD;
+    }
+
+    public void setnZD(float nZD) {
+        this.nZD = nZD;
+    }
+
+    public float getoMR() {
+        return oMR;
+    }
+
+    public void setoMR(float oMR) {
+        this.oMR = oMR;
+    }
+
+    public float getpAB() {
+        return pAB;
+    }
+
+    public void setpAB(float pAB) {
+        this.pAB = pAB;
+    }
+
+    public float getpEN() {
+        return pEN;
+    }
+
+    public void setpEN(float pEN) {
+        this.pEN = pEN;
+    }
+
+    public float getpGK() {
+        return pGK;
+    }
+
+    public void setpGK(float pGK) {
+        this.pGK = pGK;
+    }
+
+    public float getpHP() {
+        return pHP;
+    }
+
+    public void setpHP(float pHP) {
+        this.pHP = pHP;
+    }
+
+    public float getpKR() {
+        return pKR;
+    }
+
+    public void setpKR(float pKR) {
+        this.pKR = pKR;
+    }
+
+    public float getpLN() {
+        return pLN;
+    }
+
+    public void setpLN(float pLN) {
+        this.pLN = pLN;
+    }
+
+    public float getpYG() {
+        return pYG;
+    }
+
+    public void setpYG(float pYG) {
+        this.pYG = pYG;
+    }
+
+    public float getqAR() {
+        return qAR;
+    }
+
+    public void setqAR(float qAR) {
+        this.qAR = qAR;
+    }
+
+    public float getrON() {
+        return rON;
+    }
+
+    public void setrON(float rON) {
+        this.rON = rON;
+    }
+
+    public float getrSD() {
+        return rSD;
+    }
+
+    public void setrSD(float rSD) {
+        this.rSD = rSD;
+    }
+
+    public float getrUB() {
+        return rUB;
+    }
+
+    public void setrUB(float rUB) {
+        this.rUB = rUB;
+    }
+
+    public float getrWF() {
+        return rWF;
+    }
+
+    public void setrWF(float rWF) {
+        this.rWF = rWF;
+    }
+
+    public float getsAR() {
+        return sAR;
+    }
+
+    public void setsAR(float sAR) {
+        this.sAR = sAR;
+    }
+
+    public float getsBD() {
+        return sBD;
+    }
+
+    public void setsBD(float sBD) {
+        this.sBD = sBD;
+    }
+
+    public float getsCR() {
+        return sCR;
+    }
+
+    public void setsCR(float sCR) {
+        this.sCR = sCR;
+    }
+
+    public float getsDG() {
+        return sDG;
+    }
+
+    public void setsDG(float sDG) {
+        this.sDG = sDG;
+    }
+
+    public float getsEK() {
+        return sEK;
+    }
+
+    public void setsEK(float sEK) {
+        this.sEK = sEK;
+    }
+
+    public float getsGD() {
+        return sGD;
+    }
+
+    public void setsGD(float sGD) {
+        this.sGD = sGD;
+    }
+
+    public float getsHP() {
+        return sHP;
+    }
+
+    public void setsHP(float sHP) {
+        this.sHP = sHP;
+    }
+
+    public float getsLL() {
+        return sLL;
+    }
+
+    public void setsLL(float sLL) {
+        this.sLL = sLL;
+    }
+
+    public float getsOS() {
+        return sOS;
+    }
+
+    public void setsOS(float sOS) {
+        this.sOS = sOS;
+    }
+
+    public float getsRD() {
+        return sRD;
+    }
+
+    public void setsRD(float sRD) {
+        this.sRD = sRD;
+    }
+
+    public float getsTD() {
+        return sTD;
+    }
+
+    public void setsTD(float sTD) {
+        this.sTD = sTD;
+    }
+
+    public float getsVC() {
+        return sVC;
+    }
+
+    public void setsVC(float sVC) {
+        this.sVC = sVC;
+    }
+
+    public float getsYP() {
+        return sYP;
+    }
+
+    public void setsYP(float sYP) {
+        this.sYP = sYP;
+    }
+
+    public float getsZL() {
+        return sZL;
+    }
+
+    public void setsZL(float sZL) {
+        this.sZL = sZL;
+    }
+
+    public float gettHB() {
+        return tHB;
+    }
+
+    public void settHB(float tHB) {
+        this.tHB = tHB;
+    }
+
+    public float gettJS() {
+        return tJS;
+    }
+
+    public void settJS(float tJS) {
+        this.tJS = tJS;
+    }
+
+    public float gettMT() {
+        return tMT;
+    }
+
+    public void settMT(float tMT) {
+        this.tMT = tMT;
+    }
+
+    public float gettND() {
+        return tND;
+    }
+
+    public void settND(float tND) {
+        this.tND = tND;
+    }
+
+    public float gettOP() {
+        return tOP;
+    }
+
+    public void settOP(float tOP) {
+        this.tOP = tOP;
+    }
+
+    public float gettRY() {
+        return tRY;
+    }
+
+    public void settRY(float tRY) {
+        this.tRY = tRY;
+    }
+
+    public float gettTD() {
+        return tTD;
+    }
+
+    public void settTD(float tTD) {
+        this.tTD = tTD;
+    }
+
+    public float gettWD() {
+        return tWD;
+    }
+
+    public void settWD(float tWD) {
+        this.tWD = tWD;
+    }
+
+    public float gettZS() {
+        return tZS;
+    }
+
+    public void settZS(float tZS) {
+        this.tZS = tZS;
+    }
+
+    public float getuAH() {
+        return uAH;
+    }
+
+    public void setuAH(float uAH) {
+        this.uAH = uAH;
+    }
+
+    public float getuGX() {
+        return uGX;
+    }
+
+    public void setuGX(float uGX) {
+        this.uGX = uGX;
+    }
+
+    public float getuSD() {
+        return uSD;
+    }
+
+    public void setuSD(float uSD) {
+        this.uSD = uSD;
+    }
+
+    public float getuYU() {
+        return uYU;
+    }
+
+    public void setuYU(float uYU) {
+        this.uYU = uYU;
+    }
+
+    public float getuZS() {
+        return uZS;
+    }
+
+    public void setuZS(float uZS) {
+        this.uZS = uZS;
+    }
+
+    public float getvEF() {
+        return vEF;
+    }
+
+    public void setvEF(float vEF) {
+        this.vEF = vEF;
+    }
+
+    public float getvND() {
+        return vND;
+    }
+
+    public void setvND(float vND) {
+        this.vND = vND;
+    }
+
+    public float getvUV() {
+        return vUV;
+    }
+
+    public void setvUV(float vUV) {
+        this.vUV = vUV;
+    }
+
+    public float getwST() {
+        return wST;
+    }
+
+    public void setwST(float wST) {
+        this.wST = wST;
+    }
+
+    public float getxAF() {
+        return xAF;
+    }
+
+    public void setxAF(float xAF) {
+        this.xAF = xAF;
+    }
+
+    public float getxAG() {
+        return xAG;
+    }
+
+    public void setxAG(float xAG) {
+        this.xAG = xAG;
+    }
+
+    public float getxAU() {
+        return xAU;
+    }
+
+    public void setxAU(float xAU) {
+        this.xAU = xAU;
+    }
+
+    public float getxCD() {
+        return xCD;
+    }
+
+    public void setxCD(float xCD) {
+        this.xCD = xCD;
+    }
+
+    public float getxDR() {
+        return xDR;
+    }
+
+    public void setxDR(float xDR) {
+        this.xDR = xDR;
+    }
+
+    public float getxOF() {
+        return xOF;
+    }
+
+    public void setxOF(float xOF) {
+        this.xOF = xOF;
+    }
+
+    public float getxPF() {
+        return xPF;
+    }
+
+    public void setxPF(float xPF) {
+        this.xPF = xPF;
+    }
+
+    public float getyER() {
+        return yER;
+    }
+
+    public void setyER(float yER) {
+        this.yER = yER;
+    }
+
+    public float getzAR() {
+        return zAR;
+    }
+
+    public void setzAR(float zAR) {
+        this.zAR = zAR;
+    }
+
+    public float getzMK() {
+        return zMK;
+    }
+
+    public void setzMK(float zMK) {
+        this.zMK = zMK;
+    }
+
+    public float getzMW() {
+        return zMW;
+    }
+
+    public void setzMW(float zMW) {
+        this.zMW = zMW;
+    }
+
+    public float getzWL() {
+        return zWL;
+    }
+
+    public void setzWL(float zWL) {
+        this.zWL = zWL;
+    }
 
     @Override
     public String toString() {
@@ -2029,6 +2198,4 @@ public class RatesResponseApi {
                 ", zWL=" + zWL +
                 '}';
     }
-
-
 }

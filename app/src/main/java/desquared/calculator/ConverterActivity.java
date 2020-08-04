@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,14 +71,21 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                     createAlertDialog("Convert currency can't be empty", "Choose a currency to which you want to convert");
                 } else {
 
-
+                    Thread.dumpStack();
                     Gson gson = new GsonBuilder()
                             .setLenient()
                             .create();
 
+                    HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
+                    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                    OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                            .addInterceptor(loggingInterceptor)
+                            .build();
+
                     Retrofit retrofit = new Retrofit.Builder()
                             .baseUrl(BASE_URL)
                             .addConverterFactory(GsonConverterFactory.create(gson))
+                            .client(okHttpClient)
                             .build();
                     PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
                     Call<ApiResponse> call = placeHolderApi.getLatest(API_KEY);
@@ -84,40 +94,42 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                         @Override
                         public void onResponse(Call<ApiResponse> call, Response<ApiResponse> response) {
                             if (!response.isSuccessful()) {
+                                Log.d("message", "NOT ok HERE");
                                 textResult.setText("Code: " + response.code());
-                            } else if (response.isSuccessful()) {
-                                ApiResponse apiResponse = response.body();
-
-                                Field fields[] = RatesResponseApi.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
-                                List<String> currencies = new ArrayList<String>();
-                                List<Double> rates = new ArrayList<Double>();
-
-                                int index = 0;
-                                double d_help;
-                                String str_help;
-                                Object value;
-                                for (Field field : fields) {        //instert
-                                    currencies.add(index, field.getName().toUpperCase()); //array fill with the names
-                                    try {
-                                        value = field.get(apiResponse.rates);
-                                        str_help = value.toString();
-                                        d_help = Double.valueOf(str_help).doubleValue();
-                                        rates.add(index, d_help);  //array fills with the rates
-                                    } catch (IllegalAccessException e) {
-                                        e.printStackTrace();
-                                    }
-                                    index++;
-                                }
-                                HashMap<String, Double> map = new HashMap<>();  //hashmap creation with the currency names and their values
-                                for (int i = 0; i < currencies.size(); i++) {
-                                    map.put(currencies.get(i), rates.get(i));
-                                }
-
-                                final_toRate = map.get(toSpnValue);
-                                amount = Float.parseFloat(txt_amount.getText() + "");
-                                final_result = final_toRate * amount;
-                                textResult.setText(String.valueOf(final_result));
                             }
+                            Log.d("message", "ok HERE");
+                            ApiResponse apiResponse = response.body();
+
+//                                Field fields[] = RatesResponseApi.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
+//                                List<String> currencies = new ArrayList<String>();
+//                                List<Double> rates = new ArrayList<Double>();
+//
+//                                int index = 0;
+//                                double d_help;
+//                                String str_help;
+//                                Object value;
+//                                for (Field field : fields) {        //instert
+//                                    currencies.add(index, field.getName().toUpperCase()); //array fill with the names
+//                                    try {
+//                                        value = field.get(apiResponse.rates);
+//                                        str_help = value.toString();
+//                                        d_help = Double.valueOf(str_help).doubleValue();
+//                                        rates.add(index, d_help);  //array fills with the rates
+//                                    } catch (IllegalAccessException e) {
+//                                        e.printStackTrace();
+//                                    }
+//                                    index++;
+//                                }
+//                                HashMap<String, Double> map = new HashMap<>();  //hashmap creation with the currency names and their values
+//                                for (int i = 0; i < currencies.size(); i++) {
+//                                    map.put(currencies.get(i), rates.get(i));
+//                                }
+//
+//                                final_toRate = map.get(toSpnValue);
+//                                amount = Float.parseFloat(txt_amount.getText() + "");
+//                                final_result = final_toRate * amount;
+//                                textResult.setText(String.valueOf(final_result));
+
                         }
 
                         @Override
