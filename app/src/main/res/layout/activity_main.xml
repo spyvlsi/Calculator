@@ -11,7 +11,12 @@
         android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:inputType="number"
+        android:inputType="numberDecimal"
+        android:textSize="50dp"
+        android:textAlignment="center"
+        android:focusableInTouchMode="true"
+        android:cursorVisible="false"
+        android:focusable="false"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -67,6 +72,7 @@
         android:layout_marginRight="40dp"
         android:backgroundTint="@color/design_default_color_error"
         android:text="="
+        android:background = "@drawable/roundedbutton"
         android:textColor="@color/design_default_color_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

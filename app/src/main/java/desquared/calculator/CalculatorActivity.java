@@ -7,12 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemReselectedListener;
 
 public class CalculatorActivity extends AppCompatActivity {
 
@@ -20,6 +21,9 @@ public class CalculatorActivity extends AppCompatActivity {
             btn_mul, btnDot, btnC, btn_res;
 
     EditText editText;
+
+    private long backPressedTime;
+    private Toast backToast;
 
     double num1, num2;
     int flag;
@@ -250,6 +254,19 @@ public class CalculatorActivity extends AppCompatActivity {
         dlgAlert.setPositiveButton("OK", null);
         dlgAlert.setCancelable(true);
         dlgAlert.show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 }
 
