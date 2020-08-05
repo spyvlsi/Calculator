@@ -3,31 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="300dp"
         android:layout_height="120dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-<!--        android:src="@drawable/pic"/>-->
-
-
-<!--    <TextView-->
-<!--        android:id="image"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:fontFamily="cursive"-->
-<!--        android:text="Converter"-->
-<!--        android:textColor="#EDA10F"-->
-<!--        android:textSize="55sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent" />-->
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/amount_field"
@@ -35,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:hint="Please insert the amount"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:inputType="number"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image" />
@@ -66,20 +51,12 @@
         android:id="@+id/eur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@id/from"
-        android:text="EUR"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="68dp"
-        app:layout_constraintTop_toBottomOf="@id/amount_field"/>
+        android:text="EUR"
+        app:layout_constraintLeft_toRightOf="@id/from"
+        app:layout_constraintTop_toBottomOf="@id/amount_field" />
 
-<!--    <Spinner-->
-<!--        android:id="@+id/from_spinner"-->
-<!--        android:layout_width="150dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        android:layout_marginTop="68dp"-->
-<!--        app:layout_constraintLeft_toRightOf="@id/from"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/ammount_field" />-->
 
     <Spinner
         android:id="@+id/to_spinner"
@@ -87,8 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="46dp"
-        app:layout_constraintTop_toBottomOf="@id/eur"
-        app:layout_constraintLeft_toRightOf="@id/to" />
+        app:layout_constraintLeft_toRightOf="@id/to"
+        app:layout_constraintTop_toBottomOf="@id/eur" />
 
     <Button
         android:id="@+id/convBtn"
@@ -111,6 +88,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:textAlignment="center"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/convBtn" />

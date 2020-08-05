@@ -5,6 +5,8 @@ import androidx.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.HashMap;
+
 public class JsonLatestModel {
 
     @SerializedName("success")
@@ -21,9 +23,9 @@ public class JsonLatestModel {
     private String date;
     @SerializedName("rates")
     @Expose
-    public JsonRatesModel rates;
+    public HashMap<String, Double> rates;
 
-    public JsonLatestModel(boolean success, int timestamp, String base, String date, JsonRatesModel rates) {
+    public JsonLatestModel(boolean success, int timestamp, String base, String date, HashMap<String, Double> rates) {
         this.success = success;
         this.timestamp = timestamp;
         this.base = base;
@@ -63,11 +65,11 @@ public class JsonLatestModel {
         this.date = date;
     }
 
-    public JsonRatesModel getRates() {
+    public HashMap<String, Double> getRates() {
         return rates;
     }
 
-    public void setRates(JsonRatesModel rates) {
+    public void setRates(HashMap<String, Double> rates) {
         this.rates = rates;
     }
 

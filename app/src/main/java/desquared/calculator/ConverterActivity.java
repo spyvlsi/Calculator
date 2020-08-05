@@ -22,43 +22,23 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
-import org.json.JSONObject;
-
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.GET;
-
-import static com.android.volley.Request.*;
 
 public class ConverterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText txt_amount;
     Button convertBtn;
     Spinner spinnerTo;
-    float amount;
-    String toSpnValue;
     TextView textResult;
+    String textTo;
+    float amount;
     double final_toRate;
     double final_result;
-    private static final String BASE_URL = "http://data.fixer.io/api/";
-    private static final String API_KEY = "d628c113e9c378a58d31982c03e19a6b";
     private static final String IMG = "https://www.thomascook.in/images/currency-img.jpg";
     private static final String VOLLEY_URL = "http://data.fixer.io/api/latest?access_key=d628c113e9c378a58d31982c03e19a6b";
     private RequestQueue mQueue;
@@ -96,87 +76,20 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                                 public void onResponse(String response) {
                                     JsonLatestModel jsonLatestModel = new Gson().fromJson(response, JsonLatestModel.class);
                                     Log.i("RESPONSE", response);
-                                    //textResult.setText(response);
-
+                                    final_toRate = jsonLatestModel.rates.get(textTo);
+                                    amount = Float.parseFloat(txt_amount.getText() + "");
+                                    final_result = final_toRate * amount;
+                                    textResult.setText("The result is: " + String.valueOf(final_result) + " " + textTo);
                                 }
                             }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            textResult.setText("That didn't work!");
+                            textResult.setText("That didn't work! Please check your Internet connection");
                             error.printStackTrace();
                         }
                     });
                     mQueue.add(stringRequest);
-
-
-//                    Thread.dumpStack();
-//
-//                    HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-//                    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-//                    OkHttpClient okHttpClient = new OkHttpClient.Builder()
-//                            .addInterceptor(loggingInterceptor)
-//                            .build();
-//
-//                    Retrofit retrofit = new Retrofit.Builder()
-//                            .baseUrl(BASE_URL)
-//                            .addConverterFactory(GsonConverterFactory.create())
-//                            .client(okHttpClient)
-//                            .build();
-//                    PlaceHolderApi placeHolderApi = retrofit.create(PlaceHolderApi.class);
-//                    Call<JsonLatestModel> call = placeHolderApi.getLatest(API_KEY);
-//
-//                    call.enqueue(new Callback<JsonLatestModel>() {
-//
-//                        @Override
-//                        public void onResponse(Call<JsonLatestModel> call, retrofit2.Response<JsonLatestModel> response) {
-//                            if (!response.isSuccessful()) {
-//                                Log.d("RESPONSE", "NOT OK");
-//                                //textResult.setText("Code: " + response.code());
-//                            }
-//                            Log.i("RESPONSE", String.valueOf(response));
-//                            textResult.setText("DONE");
-//                            JsonLatestModel jsonLatestModel = response.body();
-//
-////                                Field fields[] = JsonRatesModel.class.getDeclaredFields();  //array creation with the names of the fields of RatesResponseApi.class
-////                                List<String> currencies = new ArrayList<String>();
-////                                List<Double> rates = new ArrayList<Double>();
-////
-////                                int index = 0;
-////                                double d_help;
-////                                String str_help;
-////                                Object value;
-////                                for (Field field : fields) {        //instert
-////                                    currencies.add(index, field.getName().toUpperCase()); //array fill with the names
-////                                    try {
-////                                        value = field.get(jsonLatestModel.rates);
-////                                        str_help = value.toString();
-////                                        d_help = Double.valueOf(str_help).doubleValue();
-////                                        rates.add(index, d_help);  //array fills with the rates
-////                                    } catch (IllegalAccessException e) {
-////                                        e.printStackTrace();
-////                                    }
-////                                    index++;
-////                                }
-////                                HashMap<String, Double> map = new HashMap<>();  //hashmap creation with the currency names and their values
-////                                for (int i = 0; i < currencies.size(); i++) {
-////                                    map.put(currencies.get(i), rates.get(i));
-////                                }
-////
-////                                final_toRate = map.get(toSpnValue);
-////                                amount = Float.parseFloat(txt_amount.getText() + "");
-////                                final_result = final_toRate * amount;
-////                                textResult.setText(String.valueOf(final_result));
-//
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<JsonLatestModel> call, Throwable t) {
-//                            textResult.setText(t.getMessage());
-//
-//                        }
-//                    });
                 }
-
             }
 
         });
@@ -204,8 +117,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
         adapterTo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTo.setAdapter(adapterTo);
         spinnerTo.setOnItemSelectedListener(this);
-        toSpnValue = spinnerTo.getSelectedItem().toString();
-
     }
 
     private void createAlertDialog(String title, String message) {
@@ -220,7 +131,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String textTo = parent.getItemAtPosition(position).toString();
+        textTo = parent.getItemAtPosition(position).toString();
     }
 
     @Override
