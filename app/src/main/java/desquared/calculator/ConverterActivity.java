@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -35,6 +36,7 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     Button convertBtn;
     Spinner spinnerTo;
     TextView textResult;
+    ImageView imageView;
     String textTo;
     float amount;
     double final_toRate;
@@ -42,6 +44,8 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     private static final String IMG = "https://www.thomascook.in/images/currency-img.jpg";
     private static final String VOLLEY_URL = "http://data.fixer.io/api/latest?access_key=d628c113e9c378a58d31982c03e19a6b";
     private RequestQueue mQueue;
+    private long backPressedTime;
+    private Toast backToast;
 
 
     @Override
@@ -49,13 +53,42 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_converter);
 
-        ImageView imageView = (ImageView) findViewById(R.id.image);
+        imageView = findViewById(R.id.image);
         Glide.with(this).load(IMG).into(imageView);
 
         txt_amount = findViewById(R.id.amount_field);
         spinnerTo = findViewById(R.id.to_spinner);
         convertBtn = findViewById(R.id.convBtn);
         textResult = findViewById(R.id.restxt2);
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.page_converter);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case (R.id.page_calculator):
+                        startActivity(new Intent(getApplicationContext(), CalculatorActivity.class));
+                        return true;
+                    case (R.id.page_converter):
+                        return true;
+                }
+                return false;
+            }
+        });
+
+
+        ArrayAdapter<CharSequence> adapterTo = ArrayAdapter.createFromResource(this,
+                R.array.currencies, android.R.layout.simple_spinner_item);
+        adapterTo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerTo.setAdapter(adapterTo);
+        spinnerTo.setOnItemSelectedListener(this);
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
 
         mQueue = Volley.newRequestQueue(this);
         convertBtn.setOnClickListener(new View.OnClickListener() {
@@ -93,30 +126,6 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
             }
 
         });
-
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-        bottomNavigationView.setSelectedItemId(R.id.page_converter);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case (R.id.page_calculator):
-                        startActivity(new Intent(getApplicationContext(), CalculatorActivity.class));
-                        return true;
-                    case (R.id.page_converter):
-                        return true;
-                }
-                return false;
-            }
-        });
-
-
-        ArrayAdapter<CharSequence> adapterTo = ArrayAdapter.createFromResource(this,
-                R.array.currencies, android.R.layout.simple_spinner_item);
-        adapterTo.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerTo.setAdapter(adapterTo);
-        spinnerTo.setOnItemSelectedListener(this);
     }
 
     private void createAlertDialog(String title, String message) {
@@ -137,6 +146,18 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+    @Override
+    public void onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            backToast.cancel();
+            super.onBackPressed();
+            return;
+        } else {
+            backToast = Toast.makeText(getBaseContext(), "Press back again to exit", Toast.LENGTH_SHORT);
+            backToast.show();
+        }
+        backPressedTime = System.currentTimeMillis();
     }
 
 }

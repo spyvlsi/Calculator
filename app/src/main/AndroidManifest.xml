@@ -12,8 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ConverterActivity" />
-        <activity android:name=".CalculatorActivity">
+        <activity android:name=".ConverterActivity"
+            android:noHistory="true"
+            android:screenOrientation="locked"/>
+        <activity android:name=".CalculatorActivity"
+            android:screenOrientation="locked"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
