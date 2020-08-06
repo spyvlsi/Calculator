@@ -1,6 +1,6 @@
 # Calculator-Currency-Converter-using-Fixer.io-Api
 
-The application has two activities! The Calculator_Activity and the Converter_Activity! The user can switch between the two screens form a bottom navigation bar, 
+The application has two activities! The Calculator_Activity and the Converter_Activity! The user can switch between the two screens from a bottom navigation bar, 
 and he/she can exit the app by double pressing the back button! 
 On the first screen the user has the ability to perform simple mathematical operations sush as addition, substraction,
 multiplication and division.
