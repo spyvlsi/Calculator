@@ -29,6 +29,9 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 
 public class ConverterActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -112,7 +115,8 @@ public class ConverterActivity extends AppCompatActivity implements AdapterView.
                                     final_toRate = jsonLatestModel.rates.get(textTo);
                                     amount = Float.parseFloat(txt_amount.getText() + "");
                                     final_result = final_toRate * amount;
-                                    textResult.setText("The result is: " + String.valueOf(final_result) + " " + textTo);
+                                    NumberFormat formatter = new DecimalFormat("#0.000");
+                                    textResult.setText("The result is: " + String.valueOf(formatter.format(final_result)) + " " + textTo);
                                 }
                             }, new Response.ErrorListener() {
                         @Override

@@ -1,6 +1,7 @@
 package desquared.calculator;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -32,6 +33,11 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
 
         btn0 = findViewById(R.id.btn_0);
         btn1 = findViewById(R.id.btn_1);
@@ -242,8 +248,6 @@ public class CalculatorActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
     }
 
     private void createAlertDialog(String title, String message) {
